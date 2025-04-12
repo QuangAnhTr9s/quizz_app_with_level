@@ -8,7 +8,7 @@
         </intent>
     </queries>
     <application
-        android:label="flash_card_app"
+        android:label="FlashyFun"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
