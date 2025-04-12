@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:developer';
 import 'dart:io';
 
+import 'package:flash_card_app/purchase/models/coin_package.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,7 @@ import '../utils/constant.dart';
 import 'config_key.dart';
 import 'iap_listener.dart';
 import 'iap_module.dart';
+import 'models/sub_package.dart';
 
 class PurchaseBookServices implements InAppPurchaseListener {
   static final PurchaseBookServices _instance =
@@ -26,12 +28,15 @@ class PurchaseBookServices implements InAppPurchaseListener {
 
   PurchaseBookServices._internal() {
     listSubBookPackages = AppInfoConstants.listSubPackages;
+    listCoinPackages = AppInfoConstants.coinsPackages;
     _currentSubBookPackage ??= listSubBookPackages[0];
   }
 
   List<SubPackage> listSubBookPackages = [];
+  List<CoinPackage> listCoinPackages = [];
 
   SubPackage? _currentSubBookPackage;
+  CoinPackage? _currentCoinPackage;
 
   bool checkCallPurchase = false;
   int? bookId = 0;
@@ -44,6 +49,7 @@ class PurchaseBookServices implements InAppPurchaseListener {
   bool _isBuyNonConsumable = true;
 
   Timer? paymentTimeoutTimer;
+
   // final int _paymentTimeoutSeconds = 90;
 
   ///Todo: init when start purchase
@@ -64,7 +70,12 @@ class PurchaseBookServices implements InAppPurchaseListener {
               ConfigKey.keySub6Android,
             ]
           : [
-              ConfigKey.keySub1Android,
+              ConfigKey.keyCoin1,
+              ConfigKey.keyCoin2,
+              ConfigKey.keyCoin3,
+              ConfigKey.keyCoin4,
+              ConfigKey.keyCoin5,
+              ConfigKey.keyCoin6,
             ];
     } else if (Platform.isIOS) {
       InAppPurchaseModule.getInstance().kProductIds = isBuyNonConsumable
@@ -77,7 +88,12 @@ class PurchaseBookServices implements InAppPurchaseListener {
               ConfigKey.keySub6Ios,
             ]
           : [
-              ConfigKey.keySub1Ios,
+              ConfigKey.keyCoin1,
+              ConfigKey.keyCoin2,
+              ConfigKey.keyCoin3,
+              ConfigKey.keyCoin4,
+              ConfigKey.keyCoin5,
+              ConfigKey.keyCoin6,
             ];
     }
   }
@@ -134,7 +150,9 @@ class PurchaseBookServices implements InAppPurchaseListener {
 
   /// Todo purchase
   Future<void> purchase(
-      {SubPackage? subBookPackage, required BuildContext context}) async {
+      {SubPackage? subBookPackage,
+      CoinPackage? coinPackage,
+      required BuildContext context}) async {
     buildContext = context;
     canShowSuccessDialog = true;
     canShowWrongDialog = true;
@@ -151,10 +169,19 @@ class PurchaseBookServices implements InAppPurchaseListener {
     }
     try {
       int productIndex = 0;
-      _currentSubBookPackage =
-          subBookPackage ?? _currentSubBookPackage ?? listSubBookPackages[0];
-      int index = listSubBookPackages.indexWhere((element) =>
-          element.keyStoreAndroid == _currentSubBookPackage?.keyStoreAndroid);
+
+      int index = -1;
+      if (_isBuyNonConsumable) {
+        _currentSubBookPackage =
+            subBookPackage ?? _currentSubBookPackage ?? listSubBookPackages[0];
+        index = listSubBookPackages.indexWhere((element) =>
+            element.keyStoreAndroid == _currentSubBookPackage?.keyStoreAndroid);
+      } else {
+        _currentCoinPackage =
+            coinPackage ?? _currentCoinPackage ?? listCoinPackages[0];
+        index = listCoinPackages.indexWhere(
+            (element) => element.keyStore == _currentCoinPackage?.keyStore);
+      }
       productIndex = index != -1 ? index : productIndex;
 
       InAppPurchaseModule.getInstance().setNavigators = true;

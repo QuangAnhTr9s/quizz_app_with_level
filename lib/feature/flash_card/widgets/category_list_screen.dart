@@ -1,4 +1,5 @@
 import 'package:flash_card_app/commons/extensions/string_extension.dart';
+import 'package:flash_card_app/feature/flash_card/widgets/coin_package_screen.dart';
 import 'package:flash_card_app/feature/flash_card/widgets/flash_card_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -34,9 +35,25 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'Topics',
-                style: TextStyle(fontSize: 24.sp),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Topics',
+                    style: TextStyle(fontSize: 24.sp),
+                  ),
+                  IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CoinPackageScreen(),
+                          ),
+                        );
+                      },
+                      icon: const Icon(Icons.shopping_bag_rounded)),
+                ],
               ),
               SizedBox(
                 height: 20.h,

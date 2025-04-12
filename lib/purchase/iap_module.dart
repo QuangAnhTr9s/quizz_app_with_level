@@ -11,6 +11,7 @@ import 'package:in_app_purchase_storekit/store_kit_wrappers.dart';
 
 import '../utils/constant.dart';
 import 'iap_listener.dart';
+import 'models/sub_package.dart';
 
 class InAppPurchaseModule {
   InAppPurchaseListener? inAppPurchaseListener;

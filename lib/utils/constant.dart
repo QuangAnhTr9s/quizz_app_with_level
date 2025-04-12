@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'package:flash_card_app/purchase/models/coin_package.dart';
+import 'package:flash_card_app/purchase/models/sub_package.dart';
 import 'package:flutter/material.dart';
 
 import '../purchase/config_key.dart';
@@ -70,28 +72,42 @@ class AppInfoConstants {
       name: '6 Month Plan',
     ),
   ];
+  static final List<CoinPackage> coinsPackages = [
+    CoinPackage(
+        imageAsset: 'assets/coin.png',
+        coinAmount: 100,
+        price: '\$0.99',
+        keyStore: ConfigKey.keyCoin1),
+    CoinPackage(
+        imageAsset: 'assets/coin_2.png',
+        coinAmount: 250,
+        price: '\$1.99',
+        keyStore: ConfigKey.keyCoin2),
+    CoinPackage(
+        imageAsset: 'assets/coin_2.png',
+        coinAmount: 500,
+        price: '\$3.49',
+        keyStore: ConfigKey.keyCoin3),
+    CoinPackage(
+        imageAsset: 'assets/coin_2.png',
+        coinAmount: 1000,
+        price: '\$5.99',
+        keyStore: ConfigKey.keyCoin4),
+    CoinPackage(
+        imageAsset: 'assets/coin_2.png',
+        coinAmount: 2000,
+        price: '\$9.99',
+        keyStore: ConfigKey.keyCoin5),
+    CoinPackage(
+        imageAsset: 'assets/coin_2.png',
+        coinAmount: 5000,
+        price: '\$19.99',
+        keyStore: ConfigKey.keyCoin6),
+  ];
 
   static String generateUserId() {
     final timestamp = DateTime.now().millisecondsSinceEpoch;
     final random = Random().nextInt(999999);
     return 'user_$timestamp$random';
   }
-}
-
-class SubPackage {
-  final int percentDiscount;
-  final double months;
-  final double price;
-  final String keyStoreIOS;
-  final String keyStoreAndroid;
-  final String name;
-
-  SubPackage({
-    this.percentDiscount = 0,
-    required this.months,
-    required this.price,
-    required this.keyStoreAndroid,
-    required this.keyStoreIOS,
-    required this.name,
-  });
 }

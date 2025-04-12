@@ -1,4 +1,5 @@
 class ConfigKey {
+  /// sub
   /// IOS
   static const String keySub1Ios = '2kword_sub_1_ios';
   static const String keySub2Ios = '2kword_sub_2_ios';
@@ -14,4 +15,12 @@ class ConfigKey {
   static const String keySub4Android = '2kword_sub_4_android';
   static const String keySub5Android = '2kword_sub_5_android';
   static const String keySub6Android = '2kword_sub_6_android';
+
+  /// coin
+  static const String keyCoin1 = 'coin_package_1';
+  static const String keyCoin2 = 'coin_package_2';
+  static const String keyCoin3 = 'coin_package_3';
+  static const String keyCoin4 = 'coin_package_4';
+  static const String keyCoin5 = 'coin_package_5';
+  static const String keyCoin6 = 'coin_package_6';
 }
