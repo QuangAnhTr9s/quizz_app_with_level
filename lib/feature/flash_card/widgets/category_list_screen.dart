@@ -48,11 +48,16 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => CoinPackageScreen(),
+                            builder: (context) => const CoinPackageScreen(),
                           ),
                         );
                       },
-                      icon: const Icon(Icons.shopping_bag_rounded)),
+                      icon: Image.asset(
+                        'assets/dollar.png',
+                        height: 48.w,
+                        width: 48.w,
+                        fit: BoxFit.fill,
+                      )),
                 ],
               ),
               SizedBox(
