@@ -75,32 +75,32 @@ class AppInfoConstants {
   static final List<CoinPackage> coinsPackages = [
     CoinPackage(
         imageAsset: 'assets/coin.png',
-        coinAmount: 100,
+        coinAmount: 27,
         price: '\$0.99',
         keyStore: ConfigKey.keyCoin1),
     CoinPackage(
         imageAsset: 'assets/coin_2.png',
-        coinAmount: 250,
+        coinAmount: 54,
         price: '\$1.99',
         keyStore: ConfigKey.keyCoin2),
     CoinPackage(
         imageAsset: 'assets/coin_2.png',
-        coinAmount: 500,
+        coinAmount: 90,
         price: '\$3.49',
         keyStore: ConfigKey.keyCoin3),
     CoinPackage(
         imageAsset: 'assets/coin_2.png',
-        coinAmount: 1000,
+        coinAmount: 117,
         price: '\$5.99',
         keyStore: ConfigKey.keyCoin4),
     CoinPackage(
         imageAsset: 'assets/coin_2.png',
-        coinAmount: 2000,
+        coinAmount: 243,
         price: '\$9.99',
         keyStore: ConfigKey.keyCoin5),
     CoinPackage(
         imageAsset: 'assets/coin_2.png',
-        coinAmount: 5000,
+        coinAmount: 630,
         price: '\$19.99',
         keyStore: ConfigKey.keyCoin6),
   ];
