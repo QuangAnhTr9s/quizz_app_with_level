@@ -11,7 +11,7 @@ import 'package:in_app_purchase_android/in_app_purchase_android.dart';
 import 'package:in_app_purchase_storekit/in_app_purchase_storekit.dart';
 
 import '../services/dialog_services.dart';
-import '../services/unlock_service.dart';
+import '../services/user_service.dart';
 import '../utils/constant.dart';
 import 'config_key.dart';
 import 'iap_listener.dart';
@@ -420,7 +420,7 @@ class PurchaseBookServices implements InAppPurchaseListener {
   }
 
   Future<void> showSuccessDialog() async {
-    UnlockService.isUnlocked = true;
+    // UserService.isUnlocked = true;
     if (buildContext != null && buildContext!.mounted && canShowSuccessDialog) {
       canShowSuccessDialog = false;
       canShowWrongDialog = false;

@@ -1,6 +1,8 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flash_card_app/commons/extensions/string_extension.dart';
 import 'package:flash_card_app/feature/flash_card/widgets/coin_package_screen.dart';
 import 'package:flash_card_app/feature/flash_card/widgets/flash_card_detail.dart';
+import 'package:flash_card_app/services/user_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../models/category_model.dart';
@@ -15,18 +17,120 @@ class CategoryListScreen extends StatefulWidget {
 
 class _CategoryListScreenState extends State<CategoryListScreen> {
   late Future<List<Category>> futureCategories;
+  List<String> unlockedCategories = [];
 
   @override
   void initState() {
     super.initState();
     futureCategories =
         CategoryService().loadCategories('assets/data/categories.json');
+    unlockedCategories = UserService.user.unlockedTopics;
+  }
+
+  void updateUser() {
+    unlockedCategories = UserService.user.unlockedTopics;
+    setState(() {});
+  }
+
+  void _showPurchaseDialog(Category category) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          title: Text(
+            'Purchase "${category.title}"',
+            style: TextStyle(
+                fontWeight: FontWeight.bold, color: Colors.orange.shade700),
+          ),
+          content: Text(
+            'Do you want to purchase this category for ${category.price} coins?',
+            style: const TextStyle(fontSize: 16),
+          ),
+          actionsPadding:
+              EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              style: TextButton.styleFrom(
+                backgroundColor: Colors.grey.shade200,
+                foregroundColor: Colors.black87,
+                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8)),
+              ),
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () {
+                final currentCoins = UserService.coinsNotifier.value;
+                if (currentCoins >= category.price) {
+                  // Deduct coins
+                  UserService.purchaseTopic(topic: category);
+
+                  Navigator.pop(context);
+                  updateUser();
+                  // // Navigate
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //   builder: (context) => FlashCardDetail(category: category),
+                  // ));
+                } else {
+                  Navigator.pop(context);
+                  _showInsufficientCoinDialog();
+                }
+              },
+              style: TextButton.styleFrom(
+                backgroundColor: Colors.orange,
+                foregroundColor: Colors.white,
+                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8)),
+              ),
+              child: const Text('Buy'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void _showInsufficientCoinDialog() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: Text(
+          'Insufficient Coins',
+          style: TextStyle(
+              color: Colors.red.shade700, fontWeight: FontWeight.bold),
+        ),
+        content: const Text(
+          'You do not have enough coins to purchase this category.',
+          style: TextStyle(fontSize: 16),
+        ),
+        actionsPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.orange.shade200,
+              foregroundColor: Colors.black,
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8)),
+            ),
+            child: const Text('Close'),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffe0b36c),
+      backgroundColor: const Color(0xffe0b36c),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(
@@ -38,27 +142,52 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
                     'Topics',
                     style: TextStyle(fontSize: 24.sp),
                   ),
-                  IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const CoinPackageScreen(),
-                          ),
-                        );
-                      },
-                      icon: Image.asset(
-                        'assets/dollar.png',
-                        height: 48.w,
-                        width: 48.w,
-                        fit: BoxFit.fill,
-                      )),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      ValueListenableBuilder(
+                        valueListenable: UserService.coinsNotifier,
+                        builder: (context, value, child) {
+                          return Text(
+                            UserService.coinsNotifier.value.toString(),
+                            style: TextStyle(
+                                fontSize: 24.sp, color: Colors.yellow),
+                          );
+                        },
+                      ),
+                      SizedBox(
+                        width: 8.w,
+                      ),
+                      IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const CoinPackageScreen(),
+                              ),
+                            ).then(
+                              (value) {
+                                setState(() {
+                                  updateUser();
+                                });
+                              },
+                            );
+                          },
+                          icon: Image.asset(
+                            'assets/dollar.png',
+                            height: 30.w,
+                            width: 30.w,
+                            fit: BoxFit.fill,
+                          )),
+                    ],
+                  ),
                 ],
               ),
               SizedBox(
@@ -84,26 +213,91 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                       separatorBuilder: (_, __) => SizedBox(height: 10.h),
                       itemBuilder: (context, index) {
                         final cat = categories[index];
-                        return Container(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 16.w, vertical: 8.h),
-                          decoration: BoxDecoration(
-                            color: Colors.blue.shade50,
-                            borderRadius: BorderRadius.circular(8.r),
-                          ),
-                          child: ListTile(
-                            title: Text(cat.title),
-                            subtitle: Text(cat.slug
-                                .replaceAll('-', ' ')
-                                .capitalizeFirstLetter),
-                            trailing: const Icon(Icons.arrow_forward_ios),
-                            onTap: () {
-                              Navigator.of(context).push(MaterialPageRoute(
+                        bool isUnlocked =
+                            unlockedCategories.contains(cat.title) ||
+                                cat.price == 0;
+                        return InkWell(
+                          onTap: () {
+                            if (isUnlocked) {
+                              Navigator.of(context)
+                                  .push(MaterialPageRoute(
                                 builder: (context) => FlashCardDetail(
                                   category: cat,
                                 ),
-                              ));
-                            },
+                              ))
+                                  .then(
+                                (value) {
+                                  setState(() {
+                                    updateUser();
+                                  });
+                                },
+                              );
+                            } else {
+                              _showPurchaseDialog(cat);
+                            }
+                          },
+                          child: Container(
+                            padding: EdgeInsets.all(12.w),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(8.r),
+                            ),
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 50.w,
+                                  height: 50.w,
+                                  decoration: BoxDecoration(
+                                    color: Colors.grey.shade300,
+                                    borderRadius: BorderRadius.circular(8.r),
+                                  ),
+                                  child: cat.image != null &&
+                                          cat.image!.isNotEmpty
+                                      ? CachedNetworkImage(imageUrl: cat.image!)
+                                      : const SizedBox(),
+                                ),
+                                SizedBox(width: 12.w),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(cat.title,
+                                          style: TextStyle(
+                                              fontSize: 16.sp,
+                                              fontWeight: FontWeight.bold)),
+                                      Text(
+                                          cat.slug
+                                              .replaceAll('-', ' ')
+                                              .capitalizeFirstLetter,
+                                          style: TextStyle(
+                                              fontSize: 14.sp,
+                                              color: Colors.black54)),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(width: 12.w),
+                                if (isUnlocked)
+                                  Icon(Icons.arrow_forward_ios, size: 16.w)
+                                else
+                                  Container(
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: 8.w, vertical: 4.h),
+                                    decoration: BoxDecoration(
+                                      color: Colors.orange.shade200,
+                                      borderRadius: BorderRadius.circular(12.r),
+                                    ),
+                                    child: Text(
+                                      '${cat.price}\ncoins',
+                                      style: TextStyle(
+                                        fontSize: 12.sp,
+                                        color: Colors.black87,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                              ],
+                            ),
                           ),
                         );
                       },

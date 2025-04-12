@@ -1,6 +1,7 @@
 import 'package:flash_card_app/feature/flash_card/widgets/custom_btn_back.dart';
 import 'package:flash_card_app/purchase/models/coin_package.dart';
 import 'package:flash_card_app/purchase/purchase_book_services.dart';
+import 'package:flash_card_app/services/user_service.dart';
 import 'package:flash_card_app/utils/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -59,8 +60,11 @@ class _CoinPackageScreenState extends State<CoinPackageScreen> {
                   itemBuilder: (context, index) {
                     final pkg = packages[index];
                     return InkWell(
-                      onTap: () => PurchaseBookServices()
-                          .purchase(coinPackage: pkg, context: context),
+                      onTap: () {
+                        PurchaseBookServices()
+                          .purchase(coinPackage: pkg, context: context);
+                        UserService.addCoin(coins: 200);
+                      },
                       child: Container(
                         decoration: BoxDecoration(
                           color: Colors.orange.shade100,

@@ -1,3 +1,4 @@
+import 'package:flash_card_app/services/user_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -5,9 +6,10 @@ import 'commons/text_to_speech.dart';
 import 'feature/flash_card/widgets/category_list_screen.dart';
 import 'purchase/purchase_book_services.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   TextToSpeech().initTTS();
+  await UserService.init();
   runApp(const MyApp());
 }
 
