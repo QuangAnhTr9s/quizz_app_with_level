@@ -1,0 +1,122 @@
+[
+  {
+    "word": "money",
+    "translate": "tiền",
+    "image": "https://plus.unsplash.com/premium_photo-1677265809141-2dae60173b27?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FzaHxlbnwwfDJ8MHx8fDA%3D",
+    "type": "noun"
+  },
+  {
+    "word": "cash",
+    "translate": "tiền mặt",
+    "image": "https://images.unsplash.com/photo-1623911380377-9137fa85ee27?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FzaHxlbnwwfDJ8MHx8fDA%3D",
+    "type": "noun"
+  },
+  {
+    "word": "credit card",
+    "translate": "thẻ tín dụng",
+    "image": "https://plus.unsplash.com/premium_photo-1661629085159-a5eda4c3e894?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3JlZGl0JTIwY2FyZHxlbnwwfDJ8MHx8fDA%3D",
+    "type": "noun"
+  },
+  {
+    "word": "price",
+    "translate": "giá",
+    "image": "https://plus.unsplash.com/premium_photo-1676983352791-4cc09d4b75ae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJpY2V8ZW58MHwyfDB8fHww",
+    "type": "noun"
+  },
+  {
+    "word": "cheap",
+    "translate": "rẻ",
+    "image": "https://images.unsplash.com/photo-1644130158113-a3c09069baca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hlYXB8ZW58MHwyfDB8fHww",
+    "type": "adjective"
+  },
+  {
+    "word": "expensive",
+    "translate": "đắt",
+    "image": "https://images.unsplash.com/photo-1743761678588-3ba5d21586fe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXhwZW5zaXZlfGVufDB8MnwwfHx8MA%3D%3D",
+    "type": "adjective"
+  },
+  {
+    "word": "discount",
+    "translate": "giảm giá",
+    "image": "https://images.unsplash.com/photo-1512106374988-c95f566d39ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzY291bnR8ZW58MHwyfDB8fHww",
+    "type": "noun"
+  },
+  {
+    "word": "sale",
+    "translate": "đợt giảm giá",
+    "image": "https://images.unsplash.com/photo-1676975320111-0837c5296aad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNhbGV8ZW58MHwyfDB8fHww",
+    "type": "noun"
+  },
+  {
+    "word": "shop",
+    "translate": "cửa hàng",
+    "image": "https://images.unsplash.com/photo-1570857502809-08184874388e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvcHxlbnwwfDJ8MHx8fDA%3D",
+    "type": "noun"
+  },
+  {
+    "word": "customer",
+    "translate": "khách hàng",
+    "image": "https://images.unsplash.com/photo-1666961999037-8d50c94528b0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y3VzdG9tZXJ8ZW58MHwyfDB8fHww",
+    "type": "noun"
+  },
+  {
+    "word": "seller",
+    "translate": "người bán",
+    "image": "https://images.unsplash.com/photo-1559925427-49435d834cb4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c2VsbGVyfGVufDB8MnwwfHx8MA%3D%3D",
+    "type": "noun"
+  },
+  {
+    "word": "buy",
+    "translate": "mua",
+    "image": "https://plus.unsplash.com/premium_photo-1658526914485-af7b566986b2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2VsbHxlbnwwfDJ8MHx8fDA%3D",
+    "type": "verb"
+  },
+  {
+    "word": "sell",
+    "translate": "bán",
+    "image": "",
+    "type": "verb"
+  },
+  {
+    "word": "receipt",
+    "translate": "hóa đơn",
+    "image": "https://plus.unsplash.com/premium_photo-1681487791907-7013a2b375af?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVjZWlwdHxlbnwwfDJ8MHx8fDA%3D",
+    "type": "noun"
+  },
+  {
+    "word": "wallet",
+    "translate": "ví tiền",
+    "image": "https://images.unsplash.com/photo-1710435846722-31ba4dc02e43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2FsbGV0fGVufDB8MnwwfHx8MA%3D%3D",
+    "type": "noun"
+  },
+  {
+    "word": "bag",
+    "translate": "túi xách",
+    "image": "https://images.unsplash.com/photo-1503513883989-25ef8b2f1a53?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJhZ3xlbnwwfDJ8MHx8fDA%3D",
+    "type": "noun"
+  },
+  {
+    "word": "change",
+    "translate": "tiền thừa",
+    "image": "https://images.unsplash.com/photo-1642115958417-b67f56baf0d6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hhbmdlJTIwbW9uZXl8ZW58MHwyfDB8fHww",
+    "type": "noun"
+  },
+  {
+    "word": "market",
+    "translate": "chợ",
+    "image": "https://images.unsplash.com/photo-1653717860304-2dc0bce0eb6f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bWFya2V0fGVufDB8MnwwfHx8MA%3D%3D",
+    "type": "noun"
+  },
+  {
+    "word": "supermarket",
+    "translate": "siêu thị",
+    "image": "https://images.unsplash.com/photo-1628102491629-778571d893a3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3VwZXJtYXJrZXR8ZW58MHwyfDB8fHww",
+    "type": "noun"
+  },
+  {
+    "word": "shopping mall",
+    "translate": "trung tâm thương mại",
+    "image": "https://images.unsplash.com/photo-1526755393771-bf2e591f33a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvcHBpbmclMjBtYWxsfGVufDB8MnwwfHx8MA%3D%3D",
+    "type": "noun"
+  }
+]

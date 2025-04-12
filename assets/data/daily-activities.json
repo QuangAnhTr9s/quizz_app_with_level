@@ -1,0 +1,122 @@
+[
+  {
+    "word": "wake up",
+    "translate": "thức dậy",
+    "image": "https://images.unsplash.com/photo-1687806556074-5e8c7a985c8a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fHdha2UlMjB1cHxlbnwwfDJ8MHx8fDA%3D",
+    "type": "verb"
+  },
+  {
+    "word": "get dressed",
+    "translate": "mặc quần áo",
+    "image": "https://images.unsplash.com/photo-1606844128209-80ba0f9afd34?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z2V0JTIwZHJlc3NlZHxlbnwwfDJ8MHx8fDA%3D",
+    "type": "verb"
+  },
+  {
+    "word": "brush teeth",
+    "translate": "đánh răng",
+    "image": "https://plus.unsplash.com/premium_photo-1723075223047-e43a3078b14e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnJ1c2glMjB0ZWV0aHxlbnwwfDJ8MHx8fDA%3D",
+    "type": "verb"
+  },
+  {
+    "word": "take a shower",
+    "translate": "tắm vòi sen",
+    "image": "https://plus.unsplash.com/premium_photo-1726729304638-c59086a3e2a6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGF2ZSUyMGJyZWFrZmFzdHxlbnwwfDJ8MHx8fDA%3D",
+    "type": "verb"
+  },
+  {
+    "word": "have breakfast",
+    "translate": "ăn sáng",
+    "image": "",
+    "type": "verb"
+  },
+  {
+    "word": "go to school",
+    "translate": "đi học",
+    "image": "https://images.unsplash.com/photo-1678270661787-eb116a04b6cb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGdvJTIwdG8lMjBzY2hvb2x8ZW58MHwyfDB8fHww",
+    "type": "verb"
+  },
+  {
+    "word": "go to work",
+    "translate": "đi làm",
+    "image": "https://images.unsplash.com/photo-1562870152-e9b679706659?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z28lMjB0byUyMHdvcmt8ZW58MHwyfDB8fHww",
+    "type": "verb"
+  },
+  {
+    "word": "study",
+    "translate": "học tập",
+    "image": "https://plus.unsplash.com/premium_photo-1723600886262-ac6df5ccbf80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fHN0dWR5fGVufDB8MnwwfHx8MA%3D%3D",
+    "type": "verb"
+  },
+  {
+    "word": "work",
+    "translate": "làm việc",
+    "image": "https://images.unsplash.com/photo-1587725835427-a9ff8e559dc3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d29ya3xlbnwwfDJ8MHx8fDA%3D",
+    "type": "verb"
+  },
+  {
+    "word": "have lunch",
+    "translate": "ăn trưa",
+    "image": "https://images.unsplash.com/photo-1671970922492-4d2a4c7a2ffe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhhdmUlMjBsdW5jaHxlbnwwfDJ8MHx8fDA%3D",
+    "type": "verb"
+  },
+  {
+    "word": "take a nap",
+    "translate": "ngủ trưa",
+    "image": "https://images.unsplash.com/photo-1608567468360-c6c9c594b930?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGFrZSUyMGElMjBuYXB8ZW58MHwyfDB8fHww",
+    "type": "verb"
+  },
+  {
+    "word": "exercise",
+    "translate": "tập thể dục",
+    "image": "https://images.unsplash.com/photo-1594737626072-90dc274bc2bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZXhlcmNpc2V8ZW58MHwyfDB8fHww",
+    "type": "verb"
+  },
+  {
+    "word": "watch TV",
+    "translate": "xem TV",
+    "image": "https://images.unsplash.com/photo-1676552053124-e8dbd747a468?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2F0Y2glMjBUVnxlbnwwfDJ8MHx8fDA%3D",
+    "type": "verb"
+  },
+  {
+    "word": "listen to music",
+    "translate": "nghe nhạc",
+    "image": "https://images.unsplash.com/photo-1573717500275-c1f3fb461a3d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxpc3RlbiUyMHRvJTIwbXVzaWN8ZW58MHwyfDB8fHww",
+    "type": "verb"
+  },
+  {
+    "word": "cook dinner",
+    "translate": "nấu bữa tối",
+    "image": "https://images.unsplash.com/photo-1663530761401-15eefb544889?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29vayUyMGRpbm5lcnxlbnwwfDJ8MHx8fDA%3D",
+    "type": "verb"
+  },
+  {
+    "word": "do the dishes",
+    "translate": "rửa chén",
+    "image": "https://images.unsplash.com/photo-1730267741036-2e0c4010d53d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZG8lMjB0aGUlMjBkaXNoZXN8ZW58MHwyfDB8fHww",
+    "type": "verb"
+  },
+  {
+    "word": "clean the house",
+    "translate": "dọn nhà",
+    "image": "https://plus.unsplash.com/premium_photo-1722686513122-9aef6345e8a6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGNsZWFuJTIwdGhlJTIwaG91c2V8ZW58MHwyfDB8fHww",
+    "type": "verb"
+  },
+  {
+    "word": "read a book",
+    "translate": "đọc sách",
+    "image": "https://images.unsplash.com/photo-1623158266748-caaa0f0371fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhZCUyMGElMjBib29rfGVufDB8MnwwfHx8MA%3D%3D",
+    "type": "verb"
+  },
+  {
+    "word": "go to bed",
+    "translate": "đi ngủ",
+    "image": "https://plus.unsplash.com/premium_photo-1658506980474-f05c27515fb3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z28lMjB0byUyMGJlZHxlbnwwfDJ8MHx8fDA%3D",
+    "type": "verb"
+  },
+  {
+    "word": "sleep",
+    "translate": "ngủ",
+    "image": "https://images.unsplash.com/photo-1437957146754-f6377debe171?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c2xlZXB8ZW58MHwyfDB8fHww",
+    "type": "verb"
+  }
+]

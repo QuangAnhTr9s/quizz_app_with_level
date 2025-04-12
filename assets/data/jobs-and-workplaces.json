@@ -1,0 +1,122 @@
+[
+  {
+    "word": "teacher",
+    "translate": "giáo viên",
+    "image": "https://plus.unsplash.com/premium_photo-1664392159809-0834c57c6637?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGVhY2hlcnxlbnwwfDJ8MHx8fDA%3D",
+    "type": "noun"
+  },
+  {
+    "word": "doctor",
+    "translate": "bác sĩ",
+    "image": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9jdG9yfGVufDB8MnwwfHx8MA%3D%3D",
+    "type": "noun"
+  },
+  {
+    "word": "engineer",
+    "translate": "kỹ sư",
+    "image": "https://plus.unsplash.com/premium_photo-1726862537812-3bc59303b37e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZW5naW5lZXJ8ZW58MHwyfDB8fHww",
+    "type": "noun"
+  },
+  {
+    "word": "nurse",
+    "translate": "y tá",
+    "image": "https://plus.unsplash.com/premium_photo-1723532403824-8925635f213e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bnVyc2V8ZW58MHwyfDB8fHww",
+    "type": "noun"
+  },
+  {
+    "word": "police officer",
+    "translate": "cảnh sát",
+    "image": "https://images.unsplash.com/flagged/photo-1572047449432-c0d2dc1181bb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9saWNlJTIwb2ZmaWNlcnxlbnwwfDJ8MHx8fDA%3D",
+    "type": "noun"
+  },
+  {
+    "word": "firefighter",
+    "translate": "lính cứu hỏa",
+    "image": "https://images.unsplash.com/photo-1610774149656-f4d74dafa99b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmlyZWZpZ2h0ZXJ8ZW58MHwyfDB8fHww",
+    "type": "noun"
+  },
+  {
+    "word": "chef",
+    "translate": "đầu bếp",
+    "image": "https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hlZnxlbnwwfDJ8MHx8fDA%3D",
+    "type": "noun"
+  },
+  {
+    "word": "waiter",
+    "translate": "phục vụ nam",
+    "image": "https://plus.unsplash.com/premium_photo-1723485664376-78e7094b0d50?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2FpdGVyfGVufDB8MnwwfHx8MA%3D%3D",
+    "type": "noun"
+  },
+  {
+    "word": "waitress",
+    "translate": "phục vụ nữ",
+    "image": "https://plus.unsplash.com/premium_photo-1726862815372-ee2c2d1bd600?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2FpdHJlc3N8ZW58MHwyfDB8fHww",
+    "type": "noun"
+  },
+  {
+    "word": "driver",
+    "translate": "tài xế",
+    "image": "https://images.unsplash.com/photo-1667970275638-7c2ef6eff862?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZHJpdmVyfGVufDB8MnwwfHx8MA%3D%3D",
+    "type": "noun"
+  },
+  {
+    "word": "pilot",
+    "translate": "phi công",
+    "image": "https://plus.unsplash.com/premium_photo-1664302664418-5cdb6fc10748?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGlsb3R8ZW58MHwyfDB8fHww",
+    "type": "noun"
+  },
+  {
+    "word": "farmer",
+    "translate": "nông dân",
+    "image": "https://images.unsplash.com/photo-1616104186913-e0421f0a25ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFybWVyfGVufDB8MnwwfHx8MA%3D%3D",
+    "type": "noun"
+  },
+  {
+    "word": "office",
+    "translate": "văn phòng",
+    "image": "https://plus.unsplash.com/premium_photo-1691784082009-1eeea96c4960?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b2ZmaWNlfGVufDB8MnwwfHx8MA%3D%3D",
+    "type": "noun"
+  },
+  {
+    "word": "hospital",
+    "translate": "bệnh viện",
+    "image": "https://images.unsplash.com/photo-1549856625-824ce09aefc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aG9zcGl0YWx8ZW58MHwyfDB8fHww",
+    "type": "noun"
+  },
+  {
+    "word": "school",
+    "translate": "trường học",
+    "image": "https://images.unsplash.com/photo-1658308910802-b71fa184aa48?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNjaG9vbHxlbnwwfDJ8MHx8fDA%3D",
+    "type": "noun"
+  },
+  {
+    "word": "restaurant",
+    "translate": "nhà hàng",
+    "image": "https://images.unsplash.com/photo-1637851682487-fa13fce5150f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVzdGF1cmFudHxlbnwwfDJ8MHx8fDA%3D",
+    "type": "noun"
+  },
+  {
+    "word": "construction site",
+    "translate": "công trường xây dựng",
+    "image": "https://plus.unsplash.com/premium_photo-1723600882597-d01048b55821?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29uc3RydWN0aW9uJTIwc2l0ZXxlbnwwfDJ8MHx8fDA%3D",
+    "type": "noun"
+  },
+  {
+    "word": "factory",
+    "translate": "nhà máy",
+    "image": "https://images.unsplash.com/photo-1649777689164-c4ad5dd3a83c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZmFjdG9yeXxlbnwwfDJ8MHx8fDA%3D",
+    "type": "noun"
+  },
+  {
+    "word": "work",
+    "translate": "làm việc",
+    "image": "https://plus.unsplash.com/premium_photo-1672287578400-fb91e083b8cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8am9ifGVufDB8MnwwfHx8MA%3D%3D",
+    "type": "verb"
+  },
+  {
+    "word": "job",
+    "translate": "công việc",
+    "image": "https://images.unsplash.com/photo-1637979909766-ccf55518a928?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8am9ifGVufDB8MnwwfHx8MA%3D%3D",
+    "type": "noun"
+  }
+]

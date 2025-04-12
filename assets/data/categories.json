@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Food & Drinks",
+    "slug": "food-and-drinks",
+    "image": "https://images.unsplash.com/photo-1704642154533-22893ca3c1ac?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filename": "food-and-drinks.json",
+    "price": 0
+  },
+  {
+    "title": "Travel & Transportation",
+    "slug": "travel-and-transportation",
+    "image": "https://images.unsplash.com/photo-1561314696-94a65a77c1c2?q=80&w=960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filename": "travel-and-transportation.json",
+    "price": 200
+  },
+  {
+    "title": "Daily Activities",
+    "slug": "daily-activities",
+    "image": "https://plus.unsplash.com/premium_photo-1723291225168-95cb2980ec19?q=80&w=9600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filename": "daily-activities.json",
+    "price": 200
+  },
+  {
+    "title": "Family & Relationships",
+    "slug": "family-and-relationships",
+    "image": "https://plus.unsplash.com/premium_photo-1661348048154-44088ae98522?q=80&w=960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filename": "family-and-relationships.json",
+    "price": 200
+  },
+  {
+    "title": "School & Education",
+    "slug": "school-and-education",
+    "image": "https://images.unsplash.com/photo-1723186051621-5c9de14e1a1b?q=80&w=960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filename": "school-and-education.json",
+    "price": 200
+  },
+  {
+    "title": "Jobs & Workplaces",
+    "slug": "jobs-and-workplaces",
+    "image": "https://plus.unsplash.com/premium_photo-1664391861596-4ab4d635b53b?q=80&w=960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filename": "jobs-and-workplaces.json",
+    "price": 200
+  },
+  {
+    "title": "Health & Body",
+    "slug": "health-and-body",
+    "image": "https://plus.unsplash.com/premium_photo-1661964336631-af8c88d34823?q=80&w=960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filename": "health-and-body.json",
+    "price": 200
+  },
+  {
+    "title": "Shopping & Money",
+    "slug": "shopping-and-money",
+    "image": "https://images.unsplash.com/photo-1619169448145-eea99df06181?q=80&w=960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filename": "shopping-and-money.json",
+    "price": 200
+  },
+  {
+    "title": "Weather & Nature",
+    "slug": "weather-and-nature",
+    "image": "https://images.unsplash.com/photo-1739134505320-6c52d19d0f30?q=80&w=960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filename": "weather-and-nature.json",
+    "price": 200
+  },
+  {
+    "title": "House & Furniture",
+    "slug": "house-and-furniture",
+    "image": "https://images.unsplash.com/photo-1678874779969-2005e8d3cde3?q=80&w=960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filename": "house-and-furniture.json",
+    "price": 200
+  },
+  {
+    "title": "Technology & Internet",
+    "slug": "technology-and-internet",
+    "image": "https://images.unsplash.com/photo-1693773508098-4e0a40ed701f?q=80&w=960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filename": "technology-and-internet.json",
+    "price": 200
+  },
+  {
+    "title": "Sports & Hobbies",
+    "slug": "sports-and-hobbies",
+    "image": "https://images.unsplash.com/photo-1615204318936-5fb910ff2de3?q=80&w=9600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filename": "sports-and-hobbies.json",
+    "price": 200
+  },
+  {
+    "title": "Clothing & Fashion",
+    "slug": "clothing-and-fashion",
+    "image": "https://images.unsplash.com/photo-1739169585918-84f6fba6c6f7?q=80&w=960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filename": "clothing-and-fashion.json",
+    "price": 200
+  },
+  {
+    "title": "Emotions & Personality",
+    "slug": "emotions-and-personality",
+    "image": "https://images.unsplash.com/photo-1706697662270-170dde70ddf8?q=80&w=960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filename": "emotions-and-personality.json",
+    "price": 200
+  },
+  {
+    "title": "Animals & Insects",
+    "slug": "animals-and-insects",
+    "image": "https://images.unsplash.com/photo-1712738960733-eba5265eef42?q=80&w=960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filename": "animals-and-insects.json",
+    "price": 200
+  }
+]
