@@ -76,6 +76,8 @@ class PurchaseBookServices implements InAppPurchaseListener {
               ConfigKey.keyCoin4,
               ConfigKey.keyCoin5,
               ConfigKey.keyCoin6,
+              ConfigKey.keyCoin7,
+              ConfigKey.keyCoin8,
             ];
     } else if (Platform.isIOS) {
       InAppPurchaseModule.getInstance().kProductIds = isBuyNonConsumable
@@ -94,6 +96,8 @@ class PurchaseBookServices implements InAppPurchaseListener {
               ConfigKey.keyCoin4,
               ConfigKey.keyCoin5,
               ConfigKey.keyCoin6,
+              ConfigKey.keyCoin7,
+              ConfigKey.keyCoin8,
             ];
     }
   }
@@ -312,6 +316,14 @@ class PurchaseBookServices implements InAppPurchaseListener {
     if (!checkCallPurchase) {
       checkCallPurchase = true;
       await showSuccessDialog();
+      if (_isBuyNonConsumable == false) {
+        CoinPackage coinsPackage = AppInfoConstants.coinsPackages.firstWhere(
+          (element) => element.keyStore == purchaseDetails.productID,
+          orElse: () => CoinPackage(
+              imageAsset: '', coinAmount: 0, price: '', keyStore: ''),
+        );
+        UserService.addCoin(coins: coinsPackage.coinAmount);
+      }
 
       // /// log to server
       // Either<BaseError, dynamic> response;

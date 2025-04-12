@@ -23,4 +23,6 @@ class ConfigKey {
   static const String keyCoin4 = 'coin_package_4';
   static const String keyCoin5 = 'coin_package_5';
   static const String keyCoin6 = 'coin_package_6';
+  static const String keyCoin7 = 'coin_package_7';
+  static const String keyCoin8 = 'coin_package_8';
 }

@@ -1,5 +1,6 @@
 import 'package:flash_card_app/services/user_service.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'commons/text_to_speech.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
+        builder: EasyLoading.init(),
         theme: ThemeData(
           // This is the theme of your application.
           //

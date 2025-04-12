@@ -9,7 +9,9 @@ import '../purchase/config_key.dart';
 class AppInfoConstants {
   static String get appId => '0';
   static String? _userId;
+
   static String get userId => _userId ?? generateUserId();
+
   static set userId(String value) {
     _userId = value;
   }
@@ -74,35 +76,53 @@ class AppInfoConstants {
   ];
   static final List<CoinPackage> coinsPackages = [
     CoinPackage(
-        imageAsset: 'assets/coin.png',
-        coinAmount: 27,
-        price: '\$0.99',
-        keyStore: ConfigKey.keyCoin1),
+      imageAsset: 'assets/coin.png',
+      coinAmount: 9,
+      price: '\$0.99',
+      keyStore: ConfigKey.keyCoin1,
+    ),
     CoinPackage(
-        imageAsset: 'assets/coin_2.png',
-        coinAmount: 54,
-        price: '\$1.99',
-        keyStore: ConfigKey.keyCoin2),
+      imageAsset: 'assets/coin_2.png',
+      coinAmount: 18,
+      price: '\$1.99',
+      keyStore: ConfigKey.keyCoin2,
+    ),
     CoinPackage(
-        imageAsset: 'assets/coin_2.png',
-        coinAmount: 90,
-        price: '\$3.49',
-        keyStore: ConfigKey.keyCoin3),
+      imageAsset: 'assets/coin_2.png',
+      coinAmount: 27,
+      price: '\$2.99',
+      keyStore: ConfigKey.keyCoin3,
+    ),
     CoinPackage(
-        imageAsset: 'assets/coin_2.png',
-        coinAmount: 117,
-        price: '\$5.99',
-        keyStore: ConfigKey.keyCoin4),
+      imageAsset: 'assets/coin_2.png',
+      coinAmount: 54,
+      price: '\$4.99',
+      keyStore: ConfigKey.keyCoin4,
+    ),
     CoinPackage(
-        imageAsset: 'assets/coin_2.png',
-        coinAmount: 243,
-        price: '\$9.99',
-        keyStore: ConfigKey.keyCoin5),
+      imageAsset: 'assets/coin_2.png',
+      coinAmount: 90,
+      price: '\$7.99',
+      keyStore: ConfigKey.keyCoin5,
+    ),
     CoinPackage(
-        imageAsset: 'assets/coin_2.png',
-        coinAmount: 630,
-        price: '\$19.99',
-        keyStore: ConfigKey.keyCoin6),
+      imageAsset: 'assets/coin_2.png',
+      coinAmount: 125,
+      price: '\$9.99',
+      keyStore: ConfigKey.keyCoin6,
+    ),
+    CoinPackage(
+      imageAsset: 'assets/coin_2.png',
+      coinAmount: 260,
+      price: '\$19.99',
+      keyStore: ConfigKey.keyCoin7,
+    ),
+    CoinPackage(
+      imageAsset: 'assets/coin_2.png',
+      coinAmount: 650,
+      price: '\$49.99',
+      keyStore: ConfigKey.keyCoin8,
+    ),
   ];
 
   static String generateUserId() {

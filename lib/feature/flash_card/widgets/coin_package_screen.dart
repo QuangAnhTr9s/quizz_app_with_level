@@ -62,8 +62,8 @@ class _CoinPackageScreenState extends State<CoinPackageScreen> {
                     return InkWell(
                       onTap: () {
                         PurchaseBookServices()
-                          .purchase(coinPackage: pkg, context: context);
-                        UserService.addCoin(coins: 200);
+                            .purchase(coinPackage: pkg, context: context);
+                        // UserService.addCoin(coins: 200);
                       },
                       child: Container(
                         decoration: BoxDecoration(
