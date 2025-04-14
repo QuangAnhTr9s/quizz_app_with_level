@@ -2,12 +2,12 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quizz_app/commons/extensions/index.dart';
 import 'package:quizz_app/cubits/user/user_cubit.dart';
-import '../../../feature/flash_card/widgets/coin_package_screen.dart';
-import '../../../feature/flash_card/widgets/flash_card_detail.dart';
+import '../purchase/coin_package_screen.dart';
+import '../flash_card/widgets/flash_card_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../models/category_model.dart';
-import '../../../services/category_service.dart';
+import '../../models/category_model.dart';
+import '../../services/category_service.dart';
 
 class CategoryListScreen extends StatefulWidget {
   const CategoryListScreen({super.key});

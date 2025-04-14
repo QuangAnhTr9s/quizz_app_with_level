@@ -1,8 +1,8 @@
 
-import '../../../feature/flash_card/widgets/custom_btn_back.dart';
-import '../../../purchase/models/coin_package.dart';
-import '../../../purchase/purchase_book_services.dart';
-import '../../../utils/constant.dart';
+import '../../commons/widgets/custom_btn_back.dart';
+import '../../purchase/models/coin_package.dart';
+import '../../purchase/purchase_book_services.dart';
+import '../../utils/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

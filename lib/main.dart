@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'commons/text_to_speech.dart';
 import 'cubits/user/user_cubit.dart';
-import 'feature/flash_card/widgets/category_list_screen.dart';
+import 'feature/home/category_list_screen.dart';
 import 'purchase/purchase_book_services.dart';
 
 Future<void> main() async {
