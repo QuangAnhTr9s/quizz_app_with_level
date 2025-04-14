@@ -70,55 +70,59 @@ class _FlashCardDetailState extends State<FlashCardDetail> {
                     ),
                   ],
                 ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.symmetric(vertical: 24.h),
-                      child: FlashCard(
-                        key: ValueKey(vocabularies[_indexVocabulary].word),
-                        vocabulary: vocabularies[_indexVocabulary],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 10.h,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          NaviButton(
-                            onTap: () {
-                              setState(() {
-                                _indexVocabulary = (_indexVocabulary - 1)
-                                    .clamp(0, vocabularies.length - 1);
-                              });
-                            },
-                            iconSize: 40.w,
-                            icon: Icon(
-                              Icons.arrow_back_ios_rounded,
-                              size: 16.w,
-                              color: Colors.white,
-                            ),
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(vertical: 24.h),
+                          child: FlashCard(
+                            key: ValueKey(vocabularies[_indexVocabulary].word),
+                            vocabulary: vocabularies[_indexVocabulary],
                           ),
-                          NaviButton(
-                            onTap: () {
-                              setState(() {
-                                _indexVocabulary = (_indexVocabulary + 1)
-                                    .clamp(0, vocabularies.length - 1);
-                              });
-                            },
-                            iconSize: 40.w,
-                            icon: Icon(
-                              Icons.arrow_forward_ios_rounded,
-                              size: 16.w,
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
+                        ),
                       ),
-                    ),
-                  ],
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 10.h,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            NaviButton(
+                              onTap: () {
+                                setState(() {
+                                  _indexVocabulary = (_indexVocabulary - 1)
+                                      .clamp(0, vocabularies.length - 1);
+                                });
+                              },
+                              iconSize: 40.w,
+                              icon: Icon(
+                                Icons.arrow_back_ios_rounded,
+                                size: 16.w,
+                                color: Colors.white,
+                              ),
+                            ),
+                            NaviButton(
+                              onTap: () {
+                                setState(() {
+                                  _indexVocabulary = (_indexVocabulary + 1)
+                                      .clamp(0, vocabularies.length - 1);
+                                });
+                              },
+                              iconSize: 40.w,
+                              icon: Icon(
+                                Icons.arrow_forward_ios_rounded,
+                                size: 16.w,
+                                color: Colors.white,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
