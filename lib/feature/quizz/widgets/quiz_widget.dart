@@ -27,31 +27,33 @@ class QuizWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           /// question
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              if (image?.isNotEmpty == true)
-                Expanded(
-                  child: Container(
-                    margin: EdgeInsets.only(bottom: 16.h),
-                    child: CachedNetworkImage(
-                      imageUrl: image!,
-                      placeholder: (context, url) => const Center(
-                        child: CircularProgressIndicator(),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                if (image?.isNotEmpty == true)
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(bottom: 16.h),
+                      child: CachedNetworkImage(
+                        imageUrl: image!,
+                        placeholder: (context, url) => const Center(
+                          child: CircularProgressIndicator(),
+                        ),
+                        errorWidget: (context, url, error) => const SizedBox(),
+                        fit: BoxFit.contain,
+                        // memCacheHeight: 150,
+                        // memCacheWidth: 150,
                       ),
-                      errorWidget: (context, url, error) => const SizedBox(),
-                      fit: BoxFit.contain,
-                      // memCacheHeight: 150,
-                      // memCacheWidth: 150,
                     ),
                   ),
-                ),
-              if (content?.isNotEmpty == true)
-                Text(
-                  content!.toCapitalized(),
-                  style: TextStyle(fontSize: 24.sp, color: Colors.white),
-                ),
-            ],
+                if (content?.isNotEmpty == true)
+                  Text(
+                    content!.toCapitalized(),
+                    style: TextStyle(fontSize: 24.sp, color: Colors.white),
+                  ),
+              ],
+            ),
           ),
 
           /// answers

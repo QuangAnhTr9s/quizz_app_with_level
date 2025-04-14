@@ -1,3 +1,5 @@
+import 'package:quizz_app/feature/quizz/widgets/quiz_widget.dart';
+
 import '../../../feature/flash_card/widgets/flash_card.dart';
 import '../../../models/category_model.dart';
 import '../../../models/vocabulary_model.dart';
@@ -77,10 +79,11 @@ class _QuizScreenState extends State<QuizScreen> {
                         Expanded(
                           child: Padding(
                             padding: EdgeInsets.symmetric(vertical: 24.h),
-                            child: FlashCard(
+                            child: QuizWidget(
                               key:
                                   ValueKey(vocabularies[_indexVocabulary].word),
-                              vocabulary: vocabularies[_indexVocabulary],
+                              content: 'dfdf',
+                              image: 'assets/coin.png',
                             ),
                           ),
                         ),

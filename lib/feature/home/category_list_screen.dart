@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quizz_app/commons/extensions/index.dart';
 import 'package:quizz_app/cubits/user/user_cubit.dart';
+import 'package:quizz_app/feature/quizz/quiz_screen.dart';
 import '../purchase/coin_package_screen.dart';
 import '../flash_card/widgets/flash_card_detail.dart';
 import 'package:flutter/material.dart';
@@ -215,7 +216,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                               onTap: () {
                                 if (isUnlocked) {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => FlashCardDetail(
+                                    builder: (context) => QuizScreen(
                                       category: cat,
                                     ),
                                   ));
