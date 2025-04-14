@@ -1,4 +1,4 @@
-package com.app.flashyfun
+package com.app.quizzapp
 
 import io.flutter.embedding.android.FlutterActivity
 
