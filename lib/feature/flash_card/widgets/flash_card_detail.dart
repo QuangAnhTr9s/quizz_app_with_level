@@ -1,7 +1,7 @@
-import 'package:flash_card_app/feature/flash_card/widgets/flash_card.dart';
-import 'package:flash_card_app/models/category_model.dart';
-import 'package:flash_card_app/models/vocabulary_model.dart';
-import 'package:flash_card_app/services/vocabulary_service.dart';
+import '../../../feature/flash_card/widgets/flash_card.dart';
+import '../../../models/category_model.dart';
+import '../../../models/vocabulary_model.dart';
+import '../../../services/vocabulary_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

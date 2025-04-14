@@ -1,8 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flash_card_app/commons/constant.dart';
-import 'package:flash_card_app/commons/extensions/string_extension.dart';
-import 'package:flash_card_app/commons/text_to_speech.dart';
-import 'package:flash_card_app/models/vocabulary_model.dart';
+import '../../../commons/extensions/string_extension.dart';
+import '../../../commons/text_to_speech.dart';
+import '../../../models/vocabulary_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:page_flip_builder/page_flip_builder.dart';

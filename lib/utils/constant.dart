@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:flash_card_app/purchase/models/coin_package.dart';
-import 'package:flash_card_app/purchase/models/sub_package.dart';
+import '../../../purchase/models/coin_package.dart';
+import '../../../purchase/models/sub_package.dart';
 import 'package:flutter/material.dart';
 
 import '../purchase/config_key.dart';

@@ -14,7 +14,6 @@ class UserService {
   UserService._internal();
 
   static User user = User();
-  static ValueNotifier<int> coinsNotifier = ValueNotifier(0);
 
   static const _userKey = 'user_data';
   static const _unlockedKey = 'unlocked_topics';
@@ -33,10 +32,10 @@ class UserService {
       // Load unlocked topics
       final unlockedList = prefs.getStringList(_unlockedKey);
       if (unlockedList != null) {
-        user.unlockedTopics = unlockedList;
+        user = user.copyWith(
+          unlockedTopics: unlockedList,
+        );
       }
-
-      coinsNotifier.value = user.coins.toInt();
     } catch (e) {
       debugPrint('Error loading user data: $e');
     }
@@ -46,7 +45,6 @@ class UserService {
     try {
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString(_userKey, jsonEncode(user.toJson()));
-      coinsNotifier.value = user.coins.toInt();
     } catch (e) {
       debugPrint('Error saving user data: $e');
     }
@@ -71,7 +69,8 @@ class UserService {
 
   static Future<void> addCoin({required int coins}) async {
     try {
-      user.coins += coins;
+      int newCoins = user.coins + coins;
+      user = user.copyWith(coins: newCoins);
       await _saveUser();
     } catch (e) {
       debugPrint('Error adding coins: $e');
@@ -80,7 +79,8 @@ class UserService {
 
   static Future<void> purchaseTopic({required Category topic}) async {
     try {
-      user.coins -= topic.price;
+      int newCoins = user.coins - topic.price;
+      user = user.copyWith(coins: newCoins);
       if (!user.unlockedTopics.contains(topic.title)) {
         user.unlockedTopics.add(topic.title);
       }

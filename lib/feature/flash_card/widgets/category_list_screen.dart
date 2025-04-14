@@ -1,8 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flash_card_app/commons/extensions/string_extension.dart';
-import 'package:flash_card_app/feature/flash_card/widgets/coin_package_screen.dart';
-import 'package:flash_card_app/feature/flash_card/widgets/flash_card_detail.dart';
-import 'package:flash_card_app/services/user_service.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quizz_app/commons/extensions/index.dart';
+import 'package:quizz_app/cubits/user/user_cubit.dart';
+import '../../../feature/flash_card/widgets/coin_package_screen.dart';
+import '../../../feature/flash_card/widgets/flash_card_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../models/category_model.dart';
@@ -17,19 +18,12 @@ class CategoryListScreen extends StatefulWidget {
 
 class _CategoryListScreenState extends State<CategoryListScreen> {
   late Future<List<Category>> futureCategories;
-  List<String> unlockedCategories = [];
 
   @override
   void initState() {
     super.initState();
     futureCategories =
         CategoryService().loadCategories('assets/data/categories.json');
-    unlockedCategories = UserService.user.unlockedTopics;
-  }
-
-  void updateUser() {
-    unlockedCategories = UserService.user.unlockedTopics;
-    setState(() {});
   }
 
   void _showPurchaseDialog(Category category) {
@@ -64,20 +58,20 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
             ),
             TextButton(
               onPressed: () {
-                final currentCoins = UserService.coinsNotifier.value;
-                if (currentCoins >= category.price) {
-                  // Deduct coins
-                  UserService.purchaseTopic(topic: category);
+                if (context.read<UserCubit>().state is UserLoaded) {
+                  final currentCoins =
+                      (context.read<UserCubit>().state as UserLoaded)
+                          .user
+                          .coins;
+                  if (currentCoins >= category.price) {
+                    // Deduct coins
+                    context.read<UserCubit>().purchaseTopic(category);
 
-                  Navigator.pop(context);
-                  updateUser();
-                  // // Navigate
-                  // Navigator.of(context).push(MaterialPageRoute(
-                  //   builder: (context) => FlashCardDetail(category: category),
-                  // ));
-                } else {
-                  Navigator.pop(context);
-                  _showInsufficientCoinDialog();
+                    Navigator.pop(context);
+                  } else {
+                    Navigator.pop(context);
+                    _showInsufficientCoinDialog();
+                  }
                 }
               },
               style: TextButton.styleFrom(
@@ -148,45 +142,43 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                     'Topics',
                     style: TextStyle(fontSize: 24.sp),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      ValueListenableBuilder(
-                        valueListenable: UserService.coinsNotifier,
-                        builder: (context, value, child) {
-                          return Text(
-                            UserService.coinsNotifier.value.toString(),
-                            style: TextStyle(
-                                fontSize: 24.sp, color: Colors.yellow),
-                          );
-                        },
-                      ),
-                      SizedBox(
-                        width: 8.w,
-                      ),
-                      IconButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const CoinPackageScreen(),
-                              ),
-                            ).then(
-                              (value) {
-                                setState(() {
-                                  updateUser();
-                                });
-                              },
-                            );
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const CoinPackageScreen(),
+                        ),
+                      );
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        BlocBuilder<UserCubit, UserState>(
+                          builder: (context, state) {
+                            if (state is UserLoaded) {
+                              return Text(
+                                state.user.coins.toInt().toString(),
+                                style: TextStyle(
+                                    fontSize: 24.sp, color: Colors.yellow),
+                              );
+                            } else {
+                              return const SizedBox();
+                            }
                           },
-                          icon: Image.asset(
-                            'assets/dollar.png',
-                            height: 30.w,
-                            width: 30.w,
-                            fit: BoxFit.fill,
-                          )),
-                    ],
+                        ),
+                        SizedBox(
+                          width: 8.w,
+                        ),
+                        Image.asset(
+                          'assets/dollar.png',
+                          height: 30.w,
+                          width: 30.w,
+                          fit: BoxFit.fill,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -207,101 +199,103 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
 
                     final categories = snapshot.data!;
 
-                    return ListView.separated(
-                      itemCount: categories.length,
-                      padding: EdgeInsets.only(bottom: 20.h),
-                      separatorBuilder: (_, __) => SizedBox(height: 10.h),
-                      itemBuilder: (context, index) {
-                        final cat = categories[index];
-                        bool isUnlocked =
-                            unlockedCategories.contains(cat.title) ||
-                                cat.price == 0;
-                        return InkWell(
-                          onTap: () {
-                            if (isUnlocked) {
-                              Navigator.of(context)
-                                  .push(MaterialPageRoute(
-                                builder: (context) => FlashCardDetail(
-                                  category: cat,
-                                ),
-                              ))
-                                  .then(
-                                (value) {
-                                  setState(() {
-                                    updateUser();
-                                  });
-                                },
-                              );
-                            } else {
-                              _showPurchaseDialog(cat);
-                            }
-                          },
-                          child: Container(
-                            padding: EdgeInsets.all(12.w),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(8.r),
-                            ),
-                            child: Row(
-                              children: [
-                                Container(
-                                  width: 50.w,
-                                  height: 50.w,
-                                  decoration: BoxDecoration(
-                                    color: Colors.grey.shade300,
-                                    borderRadius: BorderRadius.circular(8.r),
-                                  ),
-                                  child: cat.image != null &&
-                                          cat.image!.isNotEmpty
-                                      ? CachedNetworkImage(imageUrl: cat.image!)
-                                      : const SizedBox(),
-                                ),
-                                SizedBox(width: 12.w),
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(cat.title,
-                                          style: TextStyle(
-                                              fontSize: 16.sp,
-                                              fontWeight: FontWeight.bold)),
-                                      Text(
-                                          cat.slug
-                                              .replaceAll('-', ' ')
-                                              .capitalizeFirstLetter,
-                                          style: TextStyle(
-                                              fontSize: 14.sp,
-                                              color: Colors.black54)),
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(width: 12.w),
-                                if (isUnlocked)
-                                  Icon(Icons.arrow_forward_ios, size: 16.w)
-                                else
-                                  Container(
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: 8.w, vertical: 4.h),
-                                    decoration: BoxDecoration(
-                                      color: Colors.orange.shade200,
-                                      borderRadius: BorderRadius.circular(12.r),
+                    return BlocBuilder<UserCubit, UserState>(
+                        builder: (context, state) {
+                      return ListView.separated(
+                        itemCount: categories.length,
+                        padding: EdgeInsets.only(bottom: 20.h),
+                        separatorBuilder: (_, __) => SizedBox(height: 10.h),
+                        itemBuilder: (context, index) {
+                          if (state is UserLoaded) {
+                            final cat = categories[index];
+                            bool isUnlocked =
+                                state.user.unlockedTopics.contains(cat.title) ||
+                                    cat.price == 0;
+                            return InkWell(
+                              onTap: () {
+                                if (isUnlocked) {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => FlashCardDetail(
+                                      category: cat,
                                     ),
-                                    child: Text(
-                                      '${cat.price}\ncoins',
-                                      style: TextStyle(
-                                        fontSize: 12.sp,
-                                        color: Colors.black87,
-                                        fontWeight: FontWeight.bold,
+                                  ));
+                                } else {
+                                  _showPurchaseDialog(cat);
+                                }
+                              },
+                              child: Container(
+                                padding: EdgeInsets.all(12.w),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(8.r),
+                                ),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      width: 50.w,
+                                      height: 50.w,
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey.shade300,
+                                        borderRadius:
+                                            BorderRadius.circular(8.r),
+                                      ),
+                                      child: cat.image != null &&
+                                              cat.image!.isNotEmpty
+                                          ? CachedNetworkImage(
+                                              imageUrl: cat.image!)
+                                          : const SizedBox(),
+                                    ),
+                                    SizedBox(width: 12.w),
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(cat.title,
+                                              style: TextStyle(
+                                                  fontSize: 16.sp,
+                                                  fontWeight: FontWeight.bold)),
+                                          Text(
+                                              cat.slug
+                                                  .replaceAll('-', ' ')
+                                                  .capitalizeFirstLetter,
+                                              style: TextStyle(
+                                                  fontSize: 14.sp,
+                                                  color: Colors.black54)),
+                                        ],
                                       ),
                                     ),
-                                  ),
-                              ],
-                            ),
-                          ),
-                        );
-                      },
-                    );
+                                    SizedBox(width: 12.w),
+                                    if (isUnlocked)
+                                      Icon(Icons.arrow_forward_ios, size: 16.w)
+                                    else
+                                      Container(
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 8.w, vertical: 4.h),
+                                        decoration: BoxDecoration(
+                                          color: Colors.orange.shade200,
+                                          borderRadius:
+                                              BorderRadius.circular(12.r),
+                                        ),
+                                        child: Text(
+                                          '${cat.price}\ncoins',
+                                          style: TextStyle(
+                                            fontSize: 12.sp,
+                                            color: Colors.black87,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                  ],
+                                ),
+                              ),
+                            );
+                          } else {
+                            return const SizedBox.shrink();
+                          }
+                        },
+                      );
+                    });
                   },
                 ),
               ),
