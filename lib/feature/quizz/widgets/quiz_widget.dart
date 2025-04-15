@@ -1,65 +1,148 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quizz_app/commons/extensions/index.dart';
-import 'package:quizz_app/feature/quizz/widgets/quiz_button.dart';
+import 'package:quizz_app/commons/widgets/button_with_border.dart';
+import 'package:quizz_app/feature/quizz/models/quiz.dart';
+
+import '../cubit/quiz_cubit.dart';
+import 'quiz_choose_ans.dart';
 
 class QuizWidget extends StatelessWidget {
-  const QuizWidget({
-    super.key,
-    this.image,
-    this.content,
-  });
+  const QuizWidget({super.key, required this.quiz});
 
-  final String? image;
-  final String? content;
+  final Quiz quiz;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 20.w),
-      decoration: BoxDecoration(
-        color: Colors.blue.shade300,
-        borderRadius: BorderRadius.circular(16.r),
-      ),
+    return SingleChildScrollView(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           /// question
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+          if (quiz.question?.isNotEmpty == true)
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 16.h),
+              child: Text(
+                quiz.question!.toCapitalized(),
+                style: TextStyle(fontSize: 24.sp, color: Colors.white),
+              ),
+            ),
+
+          /// option buttons
+          Padding(
+            padding: EdgeInsets.only(bottom: 16.h),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                if (image?.isNotEmpty == true)
-                  Expanded(
-                    child: Container(
-                      margin: EdgeInsets.only(bottom: 16.h),
-                      child: CachedNetworkImage(
-                        imageUrl: image!,
-                        placeholder: (context, url) => const Center(
-                          child: CircularProgressIndicator(),
+                // button
+                Expanded(
+                  child: BlocBuilder<QuizCubit, QuizState>(
+                    buildWhen: (previous, current) =>
+                        previous.heart != current.heart,
+                    builder: (context, state) {
+                      return _OptionButton(
+                        text: state.heart.toString(),
+                        icon: Icon(
+                          Icons.favorite,
+                          color: Colors.red,
+                          size: 20.w,
                         ),
-                        errorWidget: (context, url, error) => const SizedBox(),
-                        fit: BoxFit.contain,
-                        // memCacheHeight: 150,
-                        // memCacheWidth: 150,
-                      ),
-                    ),
+                        onTap: () {},
+                      );
+                    },
                   ),
-                if (content?.isNotEmpty == true)
-                  Text(
-                    content!.toCapitalized(),
-                    style: TextStyle(fontSize: 24.sp, color: Colors.white),
+                ),
+                SizedBox(
+                  width: 8.w,
+                ),
+                // change question button
+                Expanded(
+                  child: BlocBuilder<QuizCubit, QuizState>(
+                    buildWhen: (previous, current) =>
+                        previous.changeQuizCount != current.changeQuizCount,
+                    builder: (context, state) {
+                      return _OptionButton(
+                        text: state.changeQuizCount.toString(),
+                        icon: Icon(
+                          Icons.autorenew,
+                          color: Colors.purple,
+                          size: 20.w,
+                        ),
+                        onTap: () {
+                          context.read<QuizCubit>().changeQuestion();
+                        },
+                      );
+                    },
                   ),
+                ),
+                SizedBox(
+                  width: 8.w,
+                ),
+
+                // eliminate answer button
+                Expanded(
+                  child: BlocBuilder<QuizCubit, QuizState>(
+                    buildWhen: (previous, current) =>
+                        previous.eliminateAnswerCount !=
+                        current.eliminateAnswerCount,
+                    builder: (context, state) {
+                      return _OptionButton(
+                        text: state.eliminateAnswerCount.toString(),
+                        icon: Icon(
+                          Icons.remove_circle,
+                          color: Colors.blue,
+                          size: 20.w,
+                        ),
+                        onTap: () {
+                          context.read<QuizCubit>().eliminateAnswer();
+                        },
+                      );
+                    },
+                  ),
+                ),
               ],
             ),
           ),
 
           /// answers
-          QuizletBtnTrueFalse(
+          const QuizChooseAns(
             isTrueAnswer: true,
           ),
+        ],
+      ),
+    );
+  }
+}
+
+class _OptionButton extends StatelessWidget {
+  const _OptionButton({
+    required this.icon,
+    required this.text,
+    required this.onTap,
+  });
+
+  final Widget icon;
+  final String text;
+  final Function() onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return ButtonWithBorder(
+      padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 16.w),
+      onTap: onTap,
+      bgColor: Colors.white,
+      child: Row(
+        children: [
+          icon,
+          SizedBox(
+            width: 16.w,
+          ),
+          Text(
+            text,
+            style: TextStyle(color: Colors.black, fontSize: 16.sp),
+          )
         ],
       ),
     );

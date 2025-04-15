@@ -1,14 +1,15 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quizz_app/commons/widgets/cancel_button.dart';
 import 'package:quizz_app/feature/quizz/widgets/quiz_widget.dart';
 
-import '../../../feature/flash_card/widgets/flash_card.dart';
 import '../../../models/category_model.dart';
-import '../../../models/vocabulary_model.dart';
-import '../../../services/vocabulary_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../commons/widgets/custom_btn_back.dart';
-import '../../../commons/widgets/linear_progress_widget.dart';
+import '../../cubits/user/user_cubit.dart';
+import '../purchase/coin_package_screen.dart';
+import 'cubit/quiz_cubit.dart';
+import 'dialogs/dialog_services.dart';
 
 class QuizScreen extends StatefulWidget {
   const QuizScreen({super.key, required this.category});
@@ -20,118 +21,151 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
-  late Future<List<Vocabulary>> _futureVocabularies;
-  int _indexVocabulary = 0;
+  final _quizCubit = QuizCubit();
 
   @override
   void initState() {
     super.initState();
-    _futureVocabularies = VocabularyService()
-        .loadVocabulary("assets/data/${widget.category.filename}");
+    _quizCubit.loadQuiz();
+  }
+
+  @override
+  void dispose() {
+    _quizCubit.close();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: FutureBuilder<List<Vocabulary>>(
-          future: _futureVocabularies,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(child: CircularProgressIndicator());
-            } else if (snapshot.hasError) {
-              return Center(child: Text('Error: ${snapshot.error}'));
-            } else if (!snapshot.hasData || snapshot.data?.isNotEmpty != true) {
-              return const SizedBox();
-            }
+    return BlocProvider(
+      create: (context) => _quizCubit,
+      child: BlocListener<QuizCubit, QuizState>(
+        listenWhen: (previous, current) =>
+            previous is QuizLoaded &&
+            current is QuizLoaded &&
+            previous.message != current.message,
+        listener: (context, state) {
+          /// listen message
+          if (state is QuizLoaded && state.message?.isNotEmpty == true) {
+            DialogService.showQuizDialog(
+              context: context,
+              message: state.message!,
+            );
+          }
+        },
+        child: Scaffold(
+          body: Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: 20.w,
+            ).copyWith(top: 16.h),
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/bg_image.png"),
+                    fit: BoxFit.fill)),
+            child: SafeArea(
+              child: BlocBuilder<QuizCubit, QuizState>(
+                bloc: _quizCubit,
+                builder: (context, state) {
+                  if (state is QuizInitial) {
+                    return const Center(child: CircularProgressIndicator());
+                  } else if (state is QuizError ||
+                      (state is QuizLoaded &&
+                          state.questions?.isNotEmpty != true)) {
+                    return const SizedBox();
+                  }
 
-            final vocabularies = snapshot.data!;
-
-            return Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: 20.w,
-              ).copyWith(top: 16.h),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
+                  final questions = state.questions!;
+                  final indexVocabulary = state.indexQuestion;
+                  return Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: EdgeInsets.only(right: 8.w),
-                        child: CustomBtnBack(
-                          iconSize: 30.h,
-                          backgroundColor: Colors.white,
-                        ),
-                      ),
-                      Expanded(
-                        child: LinearProgressWidget(
-                          percent: (_indexVocabulary + 1) / vocabularies.length,
-                          lineHeight: 24.h,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Expanded(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Expanded(
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(vertical: 24.h),
-                            child: QuizWidget(
-                              key:
-                                  ValueKey(vocabularies[_indexVocabulary].word),
-                              content: 'dfdf',
-                              image: 'assets/coin.png',
+                      /// app bar
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(right: 8.w),
+                            child: const CancelButton(),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CoinPackageScreen(),
+                                ),
+                              );
+                            },
+                            child: Container(
+                              padding: EdgeInsets.only(left: 8.w),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(24.r),
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  BlocBuilder<UserCubit, UserState>(
+                                    builder: (context, state) {
+                                      if (state is UserLoaded) {
+                                        return Text(
+                                          state.user.coins.toInt().toString(),
+                                          style: TextStyle(
+                                              fontSize: 16.sp,
+                                              color: Colors.black),
+                                        );
+                                      } else {
+                                        return const SizedBox();
+                                      }
+                                    },
+                                  ),
+                                  SizedBox(
+                                    width: 4.w,
+                                  ),
+                                  Image.asset(
+                                    'assets/dollar.png',
+                                    height: 30.w,
+                                    width: 30.w,
+                                    fit: BoxFit.fill,
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                            vertical: 10.h,
+                        ],
+                      ),
+
+                      /// content
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.symmetric(vertical: 16.h),
+                            child: Text(
+                              "Correct Answer ${indexVocabulary + 1}/${questions.length}",
+                              style: TextStyle(
+                                  fontSize: 16.sp, color: Colors.white),
+                            ),
                           ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              NaviButton(
-                                onTap: () {
-                                  setState(() {
-                                    _indexVocabulary = (_indexVocabulary - 1)
-                                        .clamp(0, vocabularies.length - 1);
-                                  });
-                                },
-                                iconSize: 40.w,
-                                icon: Icon(
-                                  Icons.arrow_back_ios_rounded,
-                                  size: 16.w,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              NaviButton(
-                                onTap: () {
-                                  setState(() {
-                                    _indexVocabulary = (_indexVocabulary + 1)
-                                        .clamp(0, vocabularies.length - 1);
-                                  });
-                                },
-                                iconSize: 40.w,
-                                icon: Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 16.w,
-                                  color: Colors.white,
-                                ),
-                              )
-                            ],
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 16.h),
+                            child: QuizWidget(
+                              key:
+                                  ValueKey(questions[indexVocabulary].question),
+                              quiz: questions[indexVocabulary],
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+                        ],
+                      ),
+                    ],
+                  );
+                },
               ),
-            );
-          },
+            ),
+          ),
         ),
       ),
     );

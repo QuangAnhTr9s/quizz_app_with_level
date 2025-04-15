@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'custom_animation_widget.dart';
 
-class CustomTextButton extends StatelessWidget {
-  const CustomTextButton({
+class CustomAnimationButton extends StatelessWidget {
+  const CustomAnimationButton({
     super.key,
     this.buttonFn,
     this.bgColor,

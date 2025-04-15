@@ -11,8 +11,6 @@ abstract class InAppPurchaseListener {
 
   void handleErrorPurchase(IAPError? error);
 
-  void _handleInvalidPurchase(PurchaseDetails? purchaseDetails);
-
   Future<bool> verifyPurchase(PurchaseDetails? purchaseDetails);
 
   Future<void> deliverProduct(PurchaseDetails? purchaseDetails);

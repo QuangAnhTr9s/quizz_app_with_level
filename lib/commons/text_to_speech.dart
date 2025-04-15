@@ -17,10 +17,10 @@ class TextToSpeech {
 
   static FlutterTts flutterTts = FlutterTts();
   Map? _currentVoice;
-  double _volume = 1.0;
-  double _pitch = 1.0;
-  double _rate = 0.5;
-  String _language = "en-US";
+  final double _volume = 1.0;
+  final double _pitch = 1.0;
+  final double _rate = 0.5;
+  final String _language = "en-US";
   String localEng = "en-US";
   String localChina = "zh-CN";
 
@@ -41,9 +41,9 @@ class TextToSpeech {
       await flutterTts.getVoices.then(
         (data) {
           try {
-            List<Map> _voices = List<Map>.from(data);
+            List<Map> voices = List<Map>.from(data);
             Map? tempVoice;
-            for (var element in _voices) {
+            for (var element in voices) {
               if (element["locale"].toLowerCase().contains(localEng)) {
                 _currentVoice = element;
                 break;

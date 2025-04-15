@@ -52,8 +52,8 @@ extension StringExtension on String? {
   }
 
   String get submitAnswer {
-    final List<dynamic> _list = (this ?? '').split('\\');
-    return _list.join();
+    final List<dynamic> list = (this ?? '').split('\\');
+    return list.join();
   }
 
   String get capitalizeFirstLetter {

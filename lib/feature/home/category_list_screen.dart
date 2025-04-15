@@ -4,7 +4,6 @@ import 'package:quizz_app/commons/extensions/index.dart';
 import 'package:quizz_app/cubits/user/user_cubit.dart';
 import 'package:quizz_app/feature/quizz/quiz_screen.dart';
 import '../purchase/coin_package_screen.dart';
-import '../flash_card/widgets/flash_card_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../models/category_model.dart';

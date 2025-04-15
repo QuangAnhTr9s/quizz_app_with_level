@@ -1,0 +1,1666 @@
+[
+  {
+    "question": "Đội tuyển nào vô địch World Cup 2018?",
+    "answers": [
+      { "answer": "Pháp", "isCorrect": true },
+      { "answer": "Croatia", "isCorrect": false },
+      { "answer": "Brazil", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Cầu thủ nào giữ kỷ lục ghi nhiều bàn nhất lịch sử World Cup?",
+    "answers": [
+      { "answer": "Miroslav Klose", "isCorrect": true },
+      { "answer": "Ronaldo (Brazil)", "isCorrect": false },
+      { "answer": "Lionel Messi", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Quả bóng vàng năm 2022 thuộc về ai?",
+    "answers": [
+      { "answer": "Karim Benzema", "isCorrect": true },
+      { "answer": "Lionel Messi", "isCorrect": false },
+      { "answer": "Robert Lewandowski", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "CLB nào đã giành nhiều chức vô địch Champions League nhất?",
+    "answers": [
+      { "answer": "Real Madrid", "isCorrect": true },
+      { "answer": "AC Milan", "isCorrect": false },
+      { "answer": "Liverpool", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Sân vận động Camp Nou thuộc về đội bóng nào?",
+    "answers": [
+      { "answer": "Barcelona", "isCorrect": true },
+      { "answer": "Real Madrid", "isCorrect": false },
+      { "answer": "Atletico Madrid", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là huấn luyện viên trưởng của đội tuyển Việt Nam tại AFF Cup 2018?",
+    "answers": [
+      { "answer": "Park Hang-seo", "isCorrect": true },
+      { "answer": "Hữu Thắng", "isCorrect": false },
+      { "answer": "Miura", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "CLB nào đã vô địch Ngoại Hạng Anh mùa giải 2022-2023?",
+    "answers": [
+      { "answer": "Manchester City", "isCorrect": true },
+      { "answer": "Arsenal", "isCorrect": false },
+      { "answer": "Manchester United", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là đội trưởng đội tuyển Argentina vô địch World Cup 2022?",
+    "answers": [
+      { "answer": "Lionel Messi", "isCorrect": true },
+      { "answer": "Di Maria", "isCorrect": false },
+      { "answer": "Otamendi", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "World Cup 2026 sẽ được tổ chức ở quốc gia nào?",
+    "answers": [
+      { "answer": "Canada, Mỹ và Mexico", "isCorrect": true },
+      { "answer": "Qatar", "isCorrect": false },
+      { "answer": "Nga", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Vua phá lưới Ngoại Hạng Anh mùa giải 2022-2023 là ai?",
+    "answers": [
+      { "answer": "Erling Haaland", "isCorrect": true },
+      { "answer": "Harry Kane", "isCorrect": false },
+      { "answer": "Mohamed Salah", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Đội bóng nào có biệt danh là 'Quỷ đỏ' ở Ngoại Hạng Anh?",
+    "answers": [
+      { "answer": "Manchester United", "isCorrect": true },
+      { "answer": "Liverpool", "isCorrect": false },
+      { "answer": "Arsenal", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Neymar rời Barcelona để gia nhập PSG vào năm nào?",
+    "answers": [
+      { "answer": "2017", "isCorrect": true },
+      { "answer": "2018", "isCorrect": false },
+      { "answer": "2016", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Đội tuyển quốc gia nào từng 5 lần vô địch World Cup?",
+    "answers": [
+      { "answer": "Brazil", "isCorrect": true },
+      { "answer": "Đức", "isCorrect": false },
+      { "answer": "Argentina", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Cầu thủ nào được mệnh danh là 'Vua bóng đá'?",
+    "answers": [
+      { "answer": "Pelé", "isCorrect": true },
+      { "answer": "Maradona", "isCorrect": false },
+      { "answer": "Ronaldinho", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "CLB đầu tiên Cristiano Ronaldo thi đấu chuyên nghiệp là?",
+    "answers": [
+      { "answer": "Sporting Lisbon", "isCorrect": true },
+      { "answer": "Manchester United", "isCorrect": false },
+      { "answer": "Real Madrid", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Thẻ đỏ đầu tiên trong lịch sử World Cup được rút năm nào?",
+    "answers": [
+      { "answer": "1974", "isCorrect": true },
+      { "answer": "1966", "isCorrect": false },
+      { "answer": "1982", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là cầu thủ Việt Nam đầu tiên chơi bóng ở châu Âu?",
+    "answers": [
+      { "answer": "Lê Công Vinh", "isCorrect": false },
+      { "answer": "Đoàn Văn Hậu", "isCorrect": false },
+      { "answer": "Lương Xuân Trường", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Euro 2020 được tổ chức vào năm nào?",
+    "answers": [
+      { "answer": "2021", "isCorrect": true },
+      { "answer": "2020", "isCorrect": false },
+      { "answer": "2022", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Giải bóng đá AFF Cup được tổ chức bao nhiêu năm một lần?",
+    "answers": [
+      { "answer": "2 năm", "isCorrect": true },
+      { "answer": "4 năm", "isCorrect": false },
+      { "answer": "1 năm", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Thành phố nào tổ chức trận chung kết World Cup 2022?",
+    "answers": [
+      { "answer": "Lusail", "isCorrect": true },
+      { "answer": "Doha", "isCorrect": false },
+      { "answer": "Al Rayyan", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là tay vợt nam giành nhiều Grand Slam nhất tính đến 2024?",
+    "answers": [
+      { "answer": "Novak Djokovic", "isCorrect": true },
+      { "answer": "Roger Federer", "isCorrect": false },
+      { "answer": "Rafael Nadal", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Giải Grand Slam nào thi đấu trên mặt sân đất nện?",
+    "answers": [
+      { "answer": "Roland Garros", "isCorrect": true },
+      { "answer": "Wimbledon", "isCorrect": false },
+      { "answer": "US Open", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là tay vợt nữ giữ kỷ lục Grand Slam nhiều nhất mọi thời đại?",
+    "answers": [
+      { "answer": "Margaret Court", "isCorrect": true },
+      { "answer": "Serena Williams", "isCorrect": false },
+      { "answer": "Steffi Graf", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Roger Federer là người đến từ quốc gia nào?",
+    "answers": [
+      { "answer": "Thụy Sĩ", "isCorrect": true },
+      { "answer": "Thụy Điển", "isCorrect": false },
+      { "answer": "Áo", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tennis là môn thi đấu chính thức ở Thế vận hội từ năm nào?",
+    "answers": [
+      { "answer": "1988", "isCorrect": true },
+      { "answer": "1972", "isCorrect": false },
+      { "answer": "1992", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tay vợt nào từng hoàn tất 'Golden Slam' trong một năm?",
+    "answers": [
+      { "answer": "Steffi Graf", "isCorrect": true },
+      { "answer": "Serena Williams", "isCorrect": false },
+      { "answer": "Martina Navratilova", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Sân trung tâm Wimbledon có tên là gì?",
+    "answers": [
+      { "answer": "Centre Court", "isCorrect": true },
+      { "answer": "Main Arena", "isCorrect": false },
+      { "answer": "Court One", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là tay vợt nam đầu tiên giành 20 Grand Slam?",
+    "answers": [
+      { "answer": "Roger Federer", "isCorrect": true },
+      { "answer": "Novak Djokovic", "isCorrect": false },
+      { "answer": "Pete Sampras", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Grand Slam nào diễn ra đầu tiên trong năm?",
+    "answers": [
+      { "answer": "Australian Open", "isCorrect": true },
+      { "answer": "French Open", "isCorrect": false },
+      { "answer": "Wimbledon", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Mỗi set tennis thường kết thúc khi ai đạt bao nhiêu game thắng trước?",
+    "answers": [
+      { "answer": "6", "isCorrect": true },
+      { "answer": "7", "isCorrect": false },
+      { "answer": "5", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là tay vợt Việt Nam từng xếp hạng cao nhất ATP?",
+    "answers": [
+      { "answer": "Lý Hoàng Nam", "isCorrect": true },
+      { "answer": "Nguyễn Hoàng Thiên", "isCorrect": false },
+      { "answer": "Trịnh Linh Giang", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Trong một game tennis, điểm đầu tiên được gọi là gì?",
+    "answers": [
+      { "answer": "15", "isCorrect": true },
+      { "answer": "10", "isCorrect": false },
+      { "answer": "5", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tennis đôi khác gì so với đơn?",
+    "answers": [
+      { "answer": "Có thêm 2 người chơi", "isCorrect": true },
+      { "answer": "Dùng vợt nhỏ hơn", "isCorrect": false },
+      { "answer": "Không có lưới giữa", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Serena Williams có bao nhiêu danh hiệu Grand Slam đơn nữ?",
+    "answers": [
+      { "answer": "23", "isCorrect": true },
+      { "answer": "24", "isCorrect": false },
+      { "answer": "22", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là người trẻ nhất vô địch Grand Slam trong lịch sử?",
+    "answers": [
+      { "answer": "Martina Hingis", "isCorrect": true },
+      { "answer": "Steffi Graf", "isCorrect": false },
+      { "answer": "Monica Seles", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tay vợt nào nổi tiếng với biệt danh 'King of Clay'?",
+    "answers": [
+      { "answer": "Rafael Nadal", "isCorrect": true },
+      { "answer": "Novak Djokovic", "isCorrect": false },
+      { "answer": "Roger Federer", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Giải Wimbledon yêu cầu tay vợt mặc màu gì?",
+    "answers": [
+      { "answer": "Trắng", "isCorrect": true },
+      { "answer": "Đen", "isCorrect": false },
+      { "answer": "Xanh lá", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Mặt sân nào nhanh nhất trong 3 loại sân Grand Slam?",
+    "answers": [
+      { "answer": "Cỏ", "isCorrect": true },
+      { "answer": "Đất nện", "isCorrect": false },
+      { "answer": "Cứng", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là nhà vô địch đơn nam US Open 2023?",
+    "answers": [
+      { "answer": "Novak Djokovic", "isCorrect": true },
+      { "answer": "Carlos Alcaraz", "isCorrect": false },
+      { "answer": "Daniil Medvedev", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Hệ thống tính điểm hiện đại trong tennis được bắt đầu từ đâu?",
+    "answers": [
+      { "answer": "Pháp", "isCorrect": true },
+      { "answer": "Anh", "isCorrect": false },
+      { "answer": "Mỹ", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Người phát minh ra bóng đèn điện là ai?",
+    "answers": [
+      { "answer": "Thomas Edison", "isCorrect": true },
+      { "answer": "Nikola Tesla", "isCorrect": false },
+      { "answer": "Alexander Graham Bell", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là người đầu tiên đặt chân lên Mặt Trăng?",
+    "answers": [
+      { "answer": "Neil Armstrong", "isCorrect": true },
+      { "answer": "Buzz Aldrin", "isCorrect": false },
+      { "answer": "Yuri Gagarin", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Chủ tịch đầu tiên của nước Việt Nam Dân chủ Cộng hòa là ai?",
+    "answers": [
+      { "answer": "Hồ Chí Minh", "isCorrect": true },
+      { "answer": "Phạm Văn Đồng", "isCorrect": false },
+      { "answer": "Trường Chinh", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Người lãnh đạo khởi nghĩa Hai Bà Trưng là ai?",
+    "answers": [
+      { "answer": "Trưng Trắc và Trưng Nhị", "isCorrect": true },
+      { "answer": "Bà Triệu", "isCorrect": false },
+      { "answer": "Ngô Quyền", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Leonardo da Vinci là tác giả của bức tranh nổi tiếng nào?",
+    "answers": [
+      { "answer": "Mona Lisa", "isCorrect": true },
+      { "answer": "The Starry Night", "isCorrect": false },
+      { "answer": "The Scream", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Vị vua nào đánh thắng quân Nguyên Mông 3 lần?",
+    "answers": [
+      { "answer": "Trần Hưng Đạo", "isCorrect": true },
+      { "answer": "Lý Thường Kiệt", "isCorrect": false },
+      { "answer": "Ngô Quyền", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Người sáng lập ra đạo Phật là ai?",
+    "answers": [
+      { "answer": "Thích Ca Mâu Ni", "isCorrect": true },
+      { "answer": "Lão Tử", "isCorrect": false },
+      { "answer": "Khổng Tử", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Napoleon Bonaparte là hoàng đế của nước nào?",
+    "answers": [
+      { "answer": "Pháp", "isCorrect": true },
+      { "answer": "Anh", "isCorrect": false },
+      { "answer": "Nga", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Albert Einstein nổi tiếng với thuyết gì?",
+    "answers": [
+      { "answer": "Thuyết tương đối", "isCorrect": true },
+      { "answer": "Thuyết tiến hóa", "isCorrect": false },
+      { "answer": "Thuyết nguyên tử", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Người đầu tiên bay vào không gian là ai?",
+    "answers": [
+      { "answer": "Yuri Gagarin", "isCorrect": true },
+      { "answer": "Neil Armstrong", "isCorrect": false },
+      { "answer": "Alan Shepard", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Lãnh tụ nào có biệt danh là 'Người sắt nước Anh'?",
+    "answers": [
+      { "answer": "Margaret Thatcher", "isCorrect": true },
+      { "answer": "Winston Churchill", "isCorrect": false },
+      { "answer": "Elizabeth II", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là người tìm ra châu Mỹ vào năm 1492?",
+    "answers": [
+      { "answer": "Christopher Columbus", "isCorrect": true },
+      { "answer": "Marco Polo", "isCorrect": false },
+      { "answer": "Amerigo Vespucci", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là tổng thống đầu tiên của Hoa Kỳ?",
+    "answers": [
+      { "answer": "George Washington", "isCorrect": true },
+      { "answer": "Abraham Lincoln", "isCorrect": false },
+      { "answer": "Thomas Jefferson", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Người được coi là 'anh hùng áo vải' của Việt Nam là ai?",
+    "answers": [
+      { "answer": "Nguyễn Huệ", "isCorrect": true },
+      { "answer": "Lê Lợi", "isCorrect": false },
+      { "answer": "Nguyễn Hoàng", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Danh nhân nào sáng lập ra đạo Nho?",
+    "answers": [
+      { "answer": "Khổng Tử", "isCorrect": true },
+      { "answer": "Mạnh Tử", "isCorrect": false },
+      { "answer": "Lão Tử", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tổng thống Mỹ bị ám sát năm 1963 là ai?",
+    "answers": [
+      { "answer": "John F. Kennedy", "isCorrect": true },
+      { "answer": "Franklin D. Roosevelt", "isCorrect": false },
+      { "answer": "Ronald Reagan", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là người thống nhất nước Đức vào thế kỷ 19?",
+    "answers": [
+      { "answer": "Otto von Bismarck", "isCorrect": true },
+      { "answer": "Wilhelm I", "isCorrect": false },
+      { "answer": "Frederick II", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Martin Luther King nổi tiếng với bài diễn văn nào?",
+    "answers": [
+      { "answer": "I Have a Dream", "isCorrect": true },
+      { "answer": "We Shall Overcome", "isCorrect": false },
+      { "answer": "Yes We Can", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là người phát minh ra điện thoại?",
+    "answers": [
+      { "answer": "Alexander Graham Bell", "isCorrect": true },
+      { "answer": "Thomas Edison", "isCorrect": false },
+      { "answer": "Nikola Tesla", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là người lãnh đạo phong trào Cần Vương?",
+    "answers": [
+      { "answer": "Phan Đình Phùng", "isCorrect": true },
+      { "answer": "Nguyễn Trường Tộ", "isCorrect": false },
+      { "answer": "Trương Định", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Nữ hoàng nổi tiếng của Ai Cập cổ đại là ai?",
+    "answers": [
+      { "answer": "Cleopatra", "isCorrect": true },
+      { "answer": "Nefertiti", "isCorrect": false },
+      { "answer": "Hatshepsut", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là nhà toán học nổi tiếng thời cổ Hy Lạp?",
+    "answers": [
+      { "answer": "Euclid", "isCorrect": true },
+      { "answer": "Aristotle", "isCorrect": false },
+      { "answer": "Hippocrates", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là người đưa ra học thuyết tiến hóa?",
+    "answers": [
+      { "answer": "Charles Darwin", "isCorrect": true },
+      { "answer": "Isaac Newton", "isCorrect": false },
+      { "answer": "Albert Einstein", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Nhà bác học nào tìm ra lực hấp dẫn?",
+    "answers": [
+      { "answer": "Isaac Newton", "isCorrect": true },
+      { "answer": "Galileo Galilei", "isCorrect": false },
+      { "answer": "Einstein", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Người phụ nữ đầu tiên nhận giải Nobel là ai?",
+    "answers": [
+      { "answer": "Marie Curie", "isCorrect": true },
+      { "answer": "Rosalind Franklin", "isCorrect": false },
+      { "answer": "Ada Lovelace", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là người đầu tiên bay bằng máy bay có động cơ?",
+    "answers": [
+      { "answer": "Anh em nhà Wright", "isCorrect": true },
+      { "answer": "Leonardo da Vinci", "isCorrect": false },
+      { "answer": "Glenn Curtiss", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Người lãnh đạo khởi nghĩa Lam Sơn là ai?",
+    "answers": [
+      { "answer": "Lê Lợi", "isCorrect": true },
+      { "answer": "Nguyễn Huệ", "isCorrect": false },
+      { "answer": "Trần Hưng Đạo", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là tổng thống Mỹ trong Thế chiến II?",
+    "answers": [
+      { "answer": "Franklin D. Roosevelt", "isCorrect": true },
+      { "answer": "Harry Truman", "isCorrect": false },
+      { "answer": "Dwight Eisenhower", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Người đánh bại quân Nam Hán trên sông Bạch Đằng năm 938 là ai?",
+    "answers": [
+      { "answer": "Ngô Quyền", "isCorrect": true },
+      { "answer": "Lý Thường Kiệt", "isCorrect": false },
+      { "answer": "Trần Hưng Đạo", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Vị vua nào của nhà Trần ba lần đánh bại quân Nguyên Mông?",
+    "answers": [
+      { "answer": "Trần Hưng Đạo", "isCorrect": true },
+      { "answer": "Trần Nhân Tông", "isCorrect": false },
+      { "answer": "Trần Thái Tông", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Cuộc khởi nghĩa Lam Sơn do ai lãnh đạo?",
+    "answers": [
+      { "answer": "Lê Lợi", "isCorrect": true },
+      { "answer": "Nguyễn Huệ", "isCorrect": false },
+      { "answer": "Phan Đình Phùng", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là người lãnh đạo phong trào Tây Sơn?",
+    "answers": [
+      { "answer": "Nguyễn Huệ", "isCorrect": true },
+      { "answer": "Nguyễn Ánh", "isCorrect": false },
+      { "answer": "Gia Long", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là người được suy tôn là 'Bác Hồ' của dân tộc Việt Nam?",
+    "answers": [
+      { "answer": "Hồ Chí Minh", "isCorrect": true },
+      { "answer": "Phạm Văn Đồng", "isCorrect": false },
+      { "answer": "Trường Chinh", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Cách mạng tháng Tám năm 1945 kết thúc chế độ nào ở Việt Nam?",
+    "answers": [
+      { "answer": "Phong kiến và thuộc địa", "isCorrect": true },
+      { "answer": "Phong kiến độc lập", "isCorrect": false },
+      { "answer": "Tư bản chủ nghĩa", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Chiến dịch Điện Biên Phủ năm 1954 do ai làm tổng chỉ huy?",
+    "answers": [
+      { "answer": "Võ Nguyên Giáp", "isCorrect": true },
+      { "answer": "Hồ Chí Minh", "isCorrect": false },
+      { "answer": "Trường Chinh", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Chế độ phong kiến đầu tiên ở Việt Nam là triều đại nào?",
+    "answers": [
+      { "answer": "Nhà Đinh", "isCorrect": true },
+      { "answer": "Nhà Tiền Lê", "isCorrect": false },
+      { "answer": "Nhà Lý", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Triều đại Lý được thành lập vào năm nào?",
+    "answers": [
+      { "answer": "1009", "isCorrect": true },
+      { "answer": "1010", "isCorrect": false },
+      { "answer": "980", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là vị nữ anh hùng chống quân Ngô năm 248?",
+    "answers": [
+      { "answer": "Bà Triệu", "isCorrect": true },
+      { "answer": "Trưng Trắc", "isCorrect": false },
+      { "answer": "Trưng Nhị", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Kinh đô Thăng Long được dời về vào năm nào?",
+    "answers": [
+      { "answer": "1010", "isCorrect": true },
+      { "answer": "1000", "isCorrect": false },
+      { "answer": "1054", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Thời kỳ Bắc thuộc kéo dài bao nhiêu năm?",
+    "answers": [
+      { "answer": "Hơn 1000 năm", "isCorrect": true },
+      { "answer": "Khoảng 500 năm", "isCorrect": false },
+      { "answer": "Gần 800 năm", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Người sáng lập triều Nguyễn là ai?",
+    "answers": [
+      { "answer": "Gia Long", "isCorrect": true },
+      { "answer": "Minh Mạng", "isCorrect": false },
+      { "answer": "Thiệu Trị", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Phan Bội Châu là lãnh tụ phong trào nào?",
+    "answers": [
+      { "answer": "Duy Tân", "isCorrect": true },
+      { "answer": "Cần Vương", "isCorrect": false },
+      { "answer": "Đông Du", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Phong trào Đông Du do ai khởi xướng?",
+    "answers": [
+      { "answer": "Phan Bội Châu", "isCorrect": true },
+      { "answer": "Phan Châu Trinh", "isCorrect": false },
+      { "answer": "Huỳnh Thúc Kháng", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ngày thành lập Đảng Cộng sản Việt Nam là ngày nào?",
+    "answers": [
+      { "answer": "3/2/1930", "isCorrect": true },
+      { "answer": "2/9/1945", "isCorrect": false },
+      { "answer": "7/5/1954", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Cuộc tổng tiến công và nổi dậy Tết Mậu Thân diễn ra năm nào?",
+    "answers": [
+      { "answer": "1968", "isCorrect": true },
+      { "answer": "1972", "isCorrect": false },
+      { "answer": "1975", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ngày giải phóng hoàn toàn miền Nam là ngày nào?",
+    "answers": [
+      { "answer": "30/4/1975", "isCorrect": true },
+      { "answer": "2/9/1945", "isCorrect": false },
+      { "answer": "20/7/1954", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Chiến dịch Hồ Chí Minh diễn ra vào năm nào?",
+    "answers": [
+      { "answer": "1975", "isCorrect": true },
+      { "answer": "1972", "isCorrect": false },
+      { "answer": "1973", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Vua Quang Trung đánh bại quân Thanh vào dịp nào?",
+    "answers": [
+      { "answer": "Tết Kỷ Dậu 1789", "isCorrect": true },
+      { "answer": "Tết Mậu Thân 1788", "isCorrect": false },
+      { "answer": "Tết Nhâm Tuất 1772", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Nguyên tố nào có ký hiệu hóa học là O?",
+    "answers": [
+      { "answer": "Oxy", "isCorrect": true },
+      { "answer": "Vàng", "isCorrect": false },
+      { "answer": "Hydro", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Nước có công thức hóa học là gì?",
+    "answers": [
+      { "answer": "H2O", "isCorrect": true },
+      { "answer": "CO2", "isCorrect": false },
+      { "answer": "NaCl", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Nguyên tử khối của Cacbon là bao nhiêu?",
+    "answers": [
+      { "answer": "12", "isCorrect": true },
+      { "answer": "14", "isCorrect": false },
+      { "answer": "16", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Muối ăn có công thức hóa học là gì?",
+    "answers": [
+      { "answer": "NaCl", "isCorrect": true },
+      { "answer": "KCl", "isCorrect": false },
+      { "answer": "NaOH", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Chất nào sau đây là bazơ?",
+    "answers": [
+      { "answer": "NaOH", "isCorrect": true },
+      { "answer": "HCl", "isCorrect": false },
+      { "answer": "CO2", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Axit mạnh trong các axit sau là?",
+    "answers": [
+      { "answer": "HCl", "isCorrect": true },
+      { "answer": "CH3COOH", "isCorrect": false },
+      { "answer": "H2CO3", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Khí nào sau đây gây hiệu ứng nhà kính?",
+    "answers": [
+      { "answer": "CO2", "isCorrect": true },
+      { "answer": "O2", "isCorrect": false },
+      { "answer": "N2", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Hợp chất nào dùng làm phân đạm?",
+    "answers": [
+      { "answer": "NH4NO3", "isCorrect": true },
+      { "answer": "Na2CO3", "isCorrect": false },
+      { "answer": "CaCl2", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Chất nào có tính khử mạnh nhất trong dãy hoạt động kim loại?",
+    "answers": [
+      { "answer": "Kali (K)", "isCorrect": true },
+      { "answer": "Sắt (Fe)", "isCorrect": false },
+      { "answer": "Đồng (Cu)", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Dãy hoạt động hóa học của kim loại sắp xếp theo thứ tự gì?",
+    "answers": [
+      { "answer": "Tính khử giảm dần", "isCorrect": true },
+      { "answer": "Nguyên tử khối tăng dần", "isCorrect": false },
+      { "answer": "Tính oxi hóa tăng dần", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Hiện tượng tạo kết tủa là?",
+    "answers": [
+      { "answer": "Chất rắn không tan xuất hiện", "isCorrect": true },
+      { "answer": "Có khí bay ra", "isCorrect": false },
+      { "answer": "Dung dịch chuyển màu", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Dung dịch nào sau đây có pH nhỏ hơn 7?",
+    "answers": [
+      { "answer": "Axit", "isCorrect": true },
+      { "answer": "Bazơ", "isCorrect": false },
+      { "answer": "Muối trung hòa", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Kim loại nào không phản ứng với axit HCl loãng?",
+    "answers": [
+      { "answer": "Đồng (Cu)", "isCorrect": true },
+      { "answer": "Kẽm (Zn)", "isCorrect": false },
+      { "answer": "Sắt (Fe)", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Khí hidro cháy tạo ra sản phẩm gì?",
+    "answers": [
+      { "answer": "Nước", "isCorrect": true },
+      { "answer": "CO2", "isCorrect": false },
+      { "answer": "Khí oxi", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ca(OH)2 là tên gọi của chất gì?",
+    "answers": [
+      { "answer": "Canxi hiđroxit", "isCorrect": true },
+      { "answer": "Canxi oxit", "isCorrect": false },
+      { "answer": "Canxi cacbonat", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Oxi chiếm khoảng bao nhiêu phần trăm thể tích không khí?",
+    "answers": [
+      { "answer": "21%", "isCorrect": true },
+      { "answer": "78%", "isCorrect": false },
+      { "answer": "1%", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Dung dịch nào sau đây làm đổi màu quỳ tím sang đỏ?",
+    "answers": [
+      { "answer": "HCl", "isCorrect": true },
+      { "answer": "NaOH", "isCorrect": false },
+      { "answer": "NaCl", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Chất nào sau đây là oxit bazơ?",
+    "answers": [
+      { "answer": "CaO", "isCorrect": true },
+      { "answer": "CO2", "isCorrect": false },
+      { "answer": "SO2", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Chất nào được dùng làm nước vôi trong?",
+    "answers": [
+      { "answer": "Ca(OH)2", "isCorrect": true },
+      { "answer": "CaCO3", "isCorrect": false },
+      { "answer": "CaCl2", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Phản ứng nào là phản ứng oxi hóa - khử?",
+    "answers": [
+      { "answer": "Fe + CuSO4 → FeSO4 + Cu", "isCorrect": true },
+      { "answer": "NaOH + HCl → NaCl + H2O", "isCorrect": false },
+      { "answer": "CaCO3 → CaO + CO2", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Châu lục nào có diện tích lớn nhất thế giới?",
+    "answers": [
+      { "answer": "Châu Á", "isCorrect": true },
+      { "answer": "Châu Phi", "isCorrect": false },
+      { "answer": "Châu Âu", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Sông nào dài nhất thế giới?",
+    "answers": [
+      { "answer": "Sông Nile", "isCorrect": true },
+      { "answer": "Sông Amazon", "isCorrect": false },
+      { "answer": "Sông Mississippi", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Nước nào có diện tích lớn nhất thế giới?",
+    "answers": [
+      { "answer": "Liên bang Nga", "isCorrect": true },
+      { "answer": "Canada", "isCorrect": false },
+      { "answer": "Trung Quốc", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Địa điểm nào là nơi thấp nhất trên mặt đất?",
+    "answers": [
+      { "answer": "Biển Chết", "isCorrect": true },
+      { "answer": "Thung lũng Chết", "isCorrect": false },
+      { "answer": "Hồ Victoria", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Sa mạc lớn nhất thế giới là?",
+    "answers": [
+      { "answer": "Sa mạc Sahara", "isCorrect": true },
+      { "answer": "Sa mạc Gobi", "isCorrect": false },
+      { "answer": "Sa mạc Kalahari", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Thủ đô của Việt Nam là gì?",
+    "answers": [
+      { "answer": "Hà Nội", "isCorrect": true },
+      { "answer": "TP. Hồ Chí Minh", "isCorrect": false },
+      { "answer": "Huế", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Núi cao nhất thế giới là?",
+    "answers": [
+      { "answer": "Everest", "isCorrect": true },
+      { "answer": "Phanxipăng", "isCorrect": false },
+      { "answer": "Andes", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Đường xích đạo đi qua bao nhiêu châu lục?",
+    "answers": [
+      { "answer": "3", "isCorrect": true },
+      { "answer": "2", "isCorrect": false },
+      { "answer": "4", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Châu lục nào có dân số đông nhất?",
+    "answers": [
+      { "answer": "Châu Á", "isCorrect": true },
+      { "answer": "Châu Phi", "isCorrect": false },
+      { "answer": "Châu Mỹ", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Nước nào có dân số đông nhất thế giới?",
+    "answers": [
+      { "answer": "Trung Quốc", "isCorrect": true },
+      { "answer": "Ấn Độ", "isCorrect": false },
+      { "answer": "Hoa Kỳ", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Biển nào lớn nhất thế giới?",
+    "answers": [
+      { "answer": "Thái Bình Dương", "isCorrect": true },
+      { "answer": "Đại Tây Dương", "isCorrect": false },
+      { "answer": "Ấn Độ Dương", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Kinh tuyến gốc đi qua quốc gia nào?",
+    "answers": [
+      { "answer": "Vương quốc Anh", "isCorrect": true },
+      { "answer": "Pháp", "isCorrect": false },
+      { "answer": "Mỹ", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Việt Nam có bao nhiêu tỉnh và thành phố trực thuộc trung ương (tính đến 2024)?",
+    "answers": [
+      { "answer": "63", "isCorrect": true },
+      { "answer": "64", "isCorrect": false },
+      { "answer": "62", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Sông Mê Kông chảy qua bao nhiêu quốc gia?",
+    "answers": [
+      { "answer": "6", "isCorrect": true },
+      { "answer": "5", "isCorrect": false },
+      { "answer": "7", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Đồng bằng lớn nhất Việt Nam là?",
+    "answers": [
+      { "answer": "Đồng bằng sông Cửu Long", "isCorrect": true },
+      { "answer": "Đồng bằng sông Hồng", "isCorrect": false },
+      { "answer": "Đồng bằng Thanh - Nghệ - Tĩnh", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Nước nào có nhiều múi giờ nhất thế giới?",
+    "answers": [
+      { "answer": "Pháp", "isCorrect": true },
+      { "answer": "Mỹ", "isCorrect": false },
+      { "answer": "Nga", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Vĩ tuyến nào chia Trái Đất thành hai bán cầu Bắc và Nam?",
+    "answers": [
+      { "answer": "Xích đạo", "isCorrect": true },
+      { "answer": "Chí tuyến Bắc", "isCorrect": false },
+      { "answer": "Chí tuyến Nam", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Lãnh thổ Việt Nam nằm ở khu vực nào của châu Á?",
+    "answers": [
+      { "answer": "Đông Nam Á", "isCorrect": true },
+      { "answer": "Nam Á", "isCorrect": false },
+      { "answer": "Tây Á", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Sơn nguyên lớn nhất Việt Nam là?",
+    "answers": [
+      { "answer": "Tây Nguyên", "isCorrect": true },
+      { "answer": "Đồng bằng sông Cửu Long", "isCorrect": false },
+      { "answer": "Sơn La", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Vùng kinh tế trọng điểm phía Nam gồm bao nhiêu tỉnh, thành?",
+    "answers": [
+      { "answer": "8", "isCorrect": true },
+      { "answer": "7", "isCorrect": false },
+      { "answer": "6", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Loài động vật nào được mệnh danh là 'chúa tể sơn lâm'?",
+    "answers": [
+      { "answer": "Sư tử", "isCorrect": false },
+      { "answer": "Hổ", "isCorrect": true },
+      { "answer": "Báo", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Động vật nào có vú nhưng lại đẻ trứng?",
+    "answers": [
+      { "answer": "Thú mỏ vịt", "isCorrect": true },
+      { "answer": "Chuột túi", "isCorrect": false },
+      { "answer": "Lợn biển", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Loài động vật nhanh nhất trên cạn là?",
+    "answers": [
+      { "answer": "Báo gê-pa (cheetah)", "isCorrect": true },
+      { "answer": "Ngựa vằn", "isCorrect": false },
+      { "answer": "Sư tử", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Động vật nào có thể thay đổi màu da để ngụy trang?",
+    "answers": [
+      { "answer": "Tắc kè hoa", "isCorrect": true },
+      { "answer": "Ếch", "isCorrect": false },
+      { "answer": "Rắn", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Loài chim nào không biết bay nhưng có thể chạy rất nhanh?",
+    "answers": [
+      { "answer": "Đà điểu", "isCorrect": true },
+      { "answer": "Cú", "isCorrect": false },
+      { "answer": "Chim cánh cụt", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Loài cá nào có thể phát điện?",
+    "answers": [
+      { "answer": "Cá chình điện", "isCorrect": true },
+      { "answer": "Cá ngừ", "isCorrect": false },
+      { "answer": "Cá heo", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Con vật nào có trí nhớ rất tốt, nổi tiếng vì không quên?",
+    "answers": [
+      { "answer": "Voi", "isCorrect": true },
+      { "answer": "Khỉ", "isCorrect": false },
+      { "answer": "Chó", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Loài động vật nào ngủ trong khi đang bay?",
+    "answers": [
+      { "answer": "Chim hải âu", "isCorrect": true },
+      { "answer": "Dơi", "isCorrect": false },
+      { "answer": "Chim sẻ", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Loài động vật có xương sống lớn nhất hiện nay là?",
+    "answers": [
+      { "answer": "Cá voi xanh", "isCorrect": true },
+      { "answer": "Cá mập trắng", "isCorrect": false },
+      { "answer": "Voi châu Phi", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Loài vật nào có khả năng tự tái sinh bộ phận cơ thể?",
+    "answers": [
+      { "answer": "Thằn lằn", "isCorrect": true },
+      { "answer": "Chim", "isCorrect": false },
+      { "answer": "Chuột", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có số lượng chân nhiều nhất?",
+    "answers": [
+      { "answer": "Rết", "isCorrect": true },
+      { "answer": "Nhện", "isCorrect": false },
+      { "answer": "Bạch tuộc", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Động vật nào có thể sống lâu nhất dưới nước?",
+    "answers": [
+      { "answer": "Rùa biển", "isCorrect": false },
+      { "answer": "Cá voi đầu cong", "isCorrect": true },
+      { "answer": "Cá ngừ", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Loài nào có độc mạnh nhất trong các loài rắn?",
+    "answers": [
+      { "answer": "Rắn Taipan", "isCorrect": true },
+      { "answer": "Rắn hổ mang", "isCorrect": false },
+      { "answer": "Rắn lục", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Loài vật nào có thể bay lùi?",
+    "answers": [
+      { "answer": "Chim ruồi", "isCorrect": true },
+      { "answer": "Bướm", "isCorrect": false },
+      { "answer": "Dơi", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Loài nào được xem là thông minh nhất trong các loài không phải con người?",
+    "answers": [
+      { "answer": "Cá heo", "isCorrect": true },
+      { "answer": "Khỉ đột", "isCorrect": false },
+      { "answer": "Chó", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Loài vật nào có khả năng nghe sóng siêu âm?",
+    "answers": [
+      { "answer": "Dơi", "isCorrect": true },
+      { "answer": "Mèo", "isCorrect": false },
+      { "answer": "Voi", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Loài nào có khả năng sống trên cạn và dưới nước?",
+    "answers": [
+      { "answer": "Lưỡng cư", "isCorrect": true },
+      { "answer": "Thú ăn thịt", "isCorrect": false },
+      { "answer": "Bò sát", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Động vật nào có tim với 3 ngăn?",
+    "answers": [
+      { "answer": "Ếch", "isCorrect": true },
+      { "answer": "Cá mập", "isCorrect": false },
+      { "answer": "Chim", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Động vật nào được xem là biểu tượng của sự trung thành?",
+    "answers": [
+      { "answer": "Chó", "isCorrect": true },
+      { "answer": "Mèo", "isCorrect": false },
+      { "answer": "Ngựa", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Động vật nào có hệ thần kinh đơn giản nhất?",
+    "answers": [
+      { "answer": "Bọt biển", "isCorrect": true },
+      { "answer": "San hô", "isCorrect": false },
+      { "answer": "Sứa", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Câu tục ngữ nào khuyên con người nên kiên trì học hỏi?",
+    "answers": [
+      { "answer": "Có công mài sắt, có ngày nên kim", "isCorrect": true },
+      { "answer": "Ăn quả nhớ kẻ trồng cây", "isCorrect": false },
+      { "answer": "Tốt gỗ hơn tốt nước sơn", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Câu nào thể hiện lòng biết ơn trong ca dao tục ngữ?",
+    "answers": [
+      { "answer": "Uống nước nhớ nguồn", "isCorrect": true },
+      { "answer": "Lá lành đùm lá rách", "isCorrect": false },
+      { "answer": "Trâu buộc ghét trâu ăn", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Câu tục ngữ nào nói về tinh thần đoàn kết?",
+    "answers": [
+      { "answer": "Một cây làm chẳng nên non, ba cây chụm lại nên hòn núi cao", "isCorrect": true },
+      { "answer": "Gần mực thì đen, gần đèn thì sáng", "isCorrect": false },
+      { "answer": "Chim khôn kêu tiếng rảnh rang", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "“Ăn cây nào, rào cây nấy” dạy ta điều gì?",
+    "answers": [
+      { "answer": "Biết ơn, bảo vệ nơi nuôi dưỡng mình", "isCorrect": true },
+      { "answer": "Cần cù lao động", "isCorrect": false },
+      { "answer": "Phải biết chọn bạn", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Câu tục ngữ nào nói về lòng hiếu thảo?",
+    "answers": [
+      { "answer": "Công cha như núi Thái Sơn, nghĩa mẹ như nước trong nguồn chảy ra", "isCorrect": true },
+      { "answer": "Thương người như thể thương thân", "isCorrect": false },
+      { "answer": "Đói cho sạch, rách cho thơm", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "“Tốt gỗ hơn tốt nước sơn” nghĩa là gì?",
+    "answers": [
+      { "answer": "Chất lượng bên trong quan trọng hơn hình thức", "isCorrect": true },
+      { "answer": "Nước sơn bóng đẹp là quan trọng", "isCorrect": false },
+      { "answer": "Gỗ quý thường đi kèm với sơn tốt", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Câu nào khuyên người ta nên giữ vệ sinh, phẩm giá?",
+    "answers": [
+      { "answer": "Đói cho sạch, rách cho thơm", "isCorrect": true },
+      { "answer": "Lá lành đùm lá rách", "isCorrect": false },
+      { "answer": "Ăn cây nào, rào cây nấy", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "“Lửa thử vàng, gian nan thử...” gì?",
+    "answers": [
+      { "answer": "Sức", "isCorrect": false },
+      { "answer": "Tình bạn", "isCorrect": false },
+      { "answer": "Sức người", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Câu ca dao nào thể hiện tình cảm gia đình?",
+    "answers": [
+      { "answer": "Anh em như thể tay chân", "isCorrect": true },
+      { "answer": "Chim khôn kêu tiếng rảnh rang", "isCorrect": false },
+      { "answer": "Một miếng khi đói bằng một gói khi no", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Câu nào nói về lòng nhân ái, chia sẻ?",
+    "answers": [
+      { "answer": "Lá lành đùm lá rách", "isCorrect": true },
+      { "answer": "Uống nước nhớ nguồn", "isCorrect": false },
+      { "answer": "Tốt gỗ hơn tốt nước sơn", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "“Gần mực thì đen, gần đèn thì sáng” khuyên ta điều gì?",
+    "answers": [
+      { "answer": "Chọn bạn mà chơi", "isCorrect": true },
+      { "answer": "Giữ vệ sinh", "isCorrect": false },
+      { "answer": "Cần cù học tập", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "“Đi một ngày đàng...” sẽ học được gì?",
+    "answers": [
+      { "answer": "Một sàng khôn", "isCorrect": true },
+      { "answer": "Một mớ chuyện", "isCorrect": false },
+      { "answer": "Một bài học", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Câu nào nói về sự kiên nhẫn trong lao động?",
+    "answers": [
+      { "answer": "Có công mài sắt, có ngày nên kim", "isCorrect": true },
+      { "answer": "Ăn quả nhớ kẻ trồng cây", "isCorrect": false },
+      { "answer": "Tốt gỗ hơn tốt nước sơn", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "“Thương người như thể thương thân” dạy ta điều gì?",
+    "answers": [
+      { "answer": "Yêu thương người khác như chính mình", "isCorrect": true },
+      { "answer": "Chăm lo bản thân", "isCorrect": false },
+      { "answer": "Đề phòng người khác", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Câu nào nhấn mạnh tầm quan trọng của cha mẹ?",
+    "answers": [
+      { "answer": "Ơn cha mẹ biển trời lai láng", "isCorrect": true },
+      { "answer": "Uống nước nhớ nguồn", "isCorrect": false },
+      { "answer": "Trâu buộc ghét trâu ăn", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "“Một miếng khi đói bằng...” gì?",
+    "answers": [
+      { "answer": "Một gói khi no", "isCorrect": true },
+      { "answer": "Một bữa ăn no", "isCorrect": false },
+      { "answer": "Một chén lúc no", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "“Cha mẹ sinh con, trời sinh...” gì?",
+    "answers": [
+      { "answer": "Tính", "isCorrect": true },
+      { "answer": "Mệnh", "isCorrect": false },
+      { "answer": "Lộc", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Câu tục ngữ nào phản ánh sự đố kỵ?",
+    "answers": [
+      { "answer": "Trâu buộc ghét trâu ăn", "isCorrect": true },
+      { "answer": "Lá lành đùm lá rách", "isCorrect": false },
+      { "answer": "Ăn quả nhớ kẻ trồng cây", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "“Chớ thấy sóng cả mà ngã...” gì?",
+    "answers": [
+      { "answer": "Tay chèo", "isCorrect": true },
+      { "answer": "Lòng", "isCorrect": false },
+      { "answer": "Thuyền", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "“Tiền vào nhà khó như...” gì?",
+    "answers": [
+      { "answer": "Gió vào nhà trống", "isCorrect": false },
+      { "answer": "Nước vào kẽ đá", "isCorrect": false },
+      { "answer": "Gió vào nhà trống", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Ai là người sáng lập Amazon?",
+    "answers": [
+      { "answer": "Jeff Bezos", "isCorrect": true },
+      { "answer": "Elon Musk", "isCorrect": false },
+      { "answer": "Bill Gates", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tỷ phú Elon Musk là CEO của công ty nào?",
+    "answers": [
+      { "answer": "Tesla", "isCorrect": true },
+      { "answer": "Apple", "isCorrect": false },
+      { "answer": "Amazon", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Warren Buffett nổi tiếng với lĩnh vực nào?",
+    "answers": [
+      { "answer": "Đầu tư tài chính", "isCorrect": true },
+      { "answer": "Công nghệ", "isCorrect": false },
+      { "answer": "Bất động sản", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Bill Gates đồng sáng lập công ty nào?",
+    "answers": [
+      { "answer": "Microsoft", "isCorrect": true },
+      { "answer": "Apple", "isCorrect": false },
+      { "answer": "Facebook", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là người sáng lập Facebook?",
+    "answers": [
+      { "answer": "Mark Zuckerberg", "isCorrect": true },
+      { "answer": "Jack Dorsey", "isCorrect": false },
+      { "answer": "Larry Page", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tỷ phú người Ấn Độ Mukesh Ambani đứng đầu tập đoàn nào?",
+    "answers": [
+      { "answer": "Reliance Industries", "isCorrect": true },
+      { "answer": "Tata Group", "isCorrect": false },
+      { "answer": "Infosys", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Bernard Arnault là CEO của tập đoàn thời trang nào?",
+    "answers": [
+      { "answer": "LVMH", "isCorrect": true },
+      { "answer": "Gucci", "isCorrect": false },
+      { "answer": "Zara", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tỷ phú nào từng là người giàu nhất thế giới nhiều năm liền trước 2020?",
+    "answers": [
+      { "answer": "Bill Gates", "isCorrect": true },
+      { "answer": "Elon Musk", "isCorrect": false },
+      { "answer": "Mark Zuckerberg", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là người sáng lập hãng thời trang Zara?",
+    "answers": [
+      { "answer": "Amancio Ortega", "isCorrect": true },
+      { "answer": "Bernard Arnault", "isCorrect": false },
+      { "answer": "Stefano Gabbana", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tỷ phú Larry Page là đồng sáng lập của công ty nào?",
+    "answers": [
+      { "answer": "Google", "isCorrect": true },
+      { "answer": "Amazon", "isCorrect": false },
+      { "answer": "Facebook", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tỷ phú Richard Branson là người sáng lập thương hiệu nào?",
+    "answers": [
+      { "answer": "Virgin Group", "isCorrect": true },
+      { "answer": "SpaceX", "isCorrect": false },
+      { "answer": "Tesla", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Elon Musk sinh ra ở quốc gia nào?",
+    "answers": [
+      { "answer": "Nam Phi", "isCorrect": true },
+      { "answer": "Mỹ", "isCorrect": false },
+      { "answer": "Canada", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tỷ phú Oprah Winfrey nổi tiếng trong lĩnh vực gì?",
+    "answers": [
+      { "answer": "Truyền hình và truyền thông", "isCorrect": true },
+      { "answer": "Bất động sản", "isCorrect": false },
+      { "answer": "Ô tô", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Jack Ma là nhà sáng lập của công ty nào?",
+    "answers": [
+      { "answer": "Alibaba", "isCorrect": true },
+      { "answer": "Tencent", "isCorrect": false },
+      { "answer": "Xiaomi", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tỷ phú Larry Ellison nổi tiếng với công ty nào?",
+    "answers": [
+      { "answer": "Oracle", "isCorrect": true },
+      { "answer": "Intel", "isCorrect": false },
+      { "answer": "IBM", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tỷ phú Elon Musk mua lại mạng xã hội nào vào năm 2022?",
+    "answers": [
+      { "answer": "Twitter", "isCorrect": true },
+      { "answer": "Reddit", "isCorrect": false },
+      { "answer": "TikTok", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Ai là nữ tỷ phú tự thân trẻ nhất thế giới vào năm 2020?",
+    "answers": [
+      { "answer": "Kylie Jenner", "isCorrect": true },
+      { "answer": "Oprah Winfrey", "isCorrect": false },
+      { "answer": "Rihanna", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tỷ phú Jeff Bezos đã từng làm việc ở đâu trước khi lập Amazon?",
+    "answers": [
+      { "answer": "Quỹ đầu tư D.E. Shaw", "isCorrect": true },
+      { "answer": "Microsoft", "isCorrect": false },
+      { "answer": "NASA", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tỷ phú nào là người giàu nhất lịch sử hiện đại (tính theo USD đã điều chỉnh lạm phát)?",
+    "answers": [
+      { "answer": "John D. Rockefeller", "isCorrect": true },
+      { "answer": "Andrew Carnegie", "isCorrect": false },
+      { "answer": "Elon Musk", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tỷ phú người Việt Nam đầu tiên được Forbes công nhận là ai?",
+    "answers": [
+      { "answer": "Phạm Nhật Vượng", "isCorrect": true },
+      { "answer": "Trần Bá Dương", "isCorrect": false },
+      { "answer": "Nguyễn Thị Phương Thảo", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Hành tinh nào gần Mặt Trời nhất?",
+    "answers": [
+      { "answer": "Sao Thủy", "isCorrect": true },
+      { "answer": "Sao Kim", "isCorrect": false },
+      { "answer": "Sao Hỏa", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Hành tinh lớn nhất trong Hệ Mặt Trời là gì?",
+    "answers": [
+      { "answer": "Sao Mộc", "isCorrect": true },
+      { "answer": "Sao Thổ", "isCorrect": false },
+      { "answer": "Trái Đất", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Trái Đất mất bao lâu để quay quanh Mặt Trời?",
+    "answers": [
+      { "answer": "365 ngày", "isCorrect": true },
+      { "answer": "30 ngày", "isCorrect": false },
+      { "answer": "24 giờ", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Mặt Trăng là vệ tinh tự nhiên của hành tinh nào?",
+    "answers": [
+      { "answer": "Trái Đất", "isCorrect": true },
+      { "answer": "Sao Hỏa", "isCorrect": false },
+      { "answer": "Sao Thủy", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Sao nào gần Trái Đất nhất (ngoài Mặt Trời)?",
+    "answers": [
+      { "answer": "Proxima Centauri", "isCorrect": true },
+      { "answer": "Alpha Centauri A", "isCorrect": false },
+      { "answer": "Sirius", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Hành tinh nào có vành đai rõ nhất?",
+    "answers": [
+      { "answer": "Sao Thổ", "isCorrect": true },
+      { "answer": "Sao Mộc", "isCorrect": false },
+      { "answer": "Sao Thiên Vương", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Thiên hà mà Trái Đất nằm trong gọi là gì?",
+    "answers": [
+      { "answer": "Ngân Hà", "isCorrect": true },
+      { "answer": "Andromeda", "isCorrect": false },
+      { "answer": "Tam Giác", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Người đầu tiên bay vào không gian là ai?",
+    "answers": [
+      { "answer": "Yuri Gagarin", "isCorrect": true },
+      { "answer": "Neil Armstrong", "isCorrect": false },
+      { "answer": "Buzz Aldrin", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Người đầu tiên đặt chân lên Mặt Trăng là ai?",
+    "answers": [
+      { "answer": "Neil Armstrong", "isCorrect": true },
+      { "answer": "Yuri Gagarin", "isCorrect": false },
+      { "answer": "Michael Collins", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Hố đen là gì?",
+    "answers": [
+      { "answer": "Vùng không gian có trọng lực cực mạnh", "isCorrect": true },
+      { "answer": "Một hành tinh tối", "isCorrect": false },
+      { "answer": "Một ngôi sao chưa hình thành", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tia sáng mất bao lâu để đi từ Mặt Trời đến Trái Đất?",
+    "answers": [
+      { "answer": "Khoảng 8 phút", "isCorrect": true },
+      { "answer": "1 giây", "isCorrect": false },
+      { "answer": "1 giờ", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Trái Đất có bao nhiêu vệ tinh tự nhiên?",
+    "answers": [
+      { "answer": "1", "isCorrect": true },
+      { "answer": "2", "isCorrect": false },
+      { "answer": "0", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Sao Hỏa còn được gọi là gì?",
+    "answers": [
+      { "answer": "Hành tinh Đỏ", "isCorrect": true },
+      { "answer": "Hành tinh Băng", "isCorrect": false },
+      { "answer": "Hành tinh Lửa", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tổ chức nào điều hành các sứ mệnh không gian của Mỹ?",
+    "answers": [
+      { "answer": "NASA", "isCorrect": true },
+      { "answer": "ESA", "isCorrect": false },
+      { "answer": "SpaceX", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Vệ tinh nhân tạo đầu tiên do con người phóng lên vũ trụ là gì?",
+    "answers": [
+      { "answer": "Sputnik 1", "isCorrect": true },
+      { "answer": "Apollo 11", "isCorrect": false },
+      { "answer": "Luna 2", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Thiên thạch là gì?",
+    "answers": [
+      { "answer": "Mảnh đá rơi xuống Trái Đất từ không gian", "isCorrect": true },
+      { "answer": "Sao chổi nhỏ", "isCorrect": false },
+      { "answer": "Mảnh vỡ tàu vũ trụ", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Mặt Trời là loại sao gì?",
+    "answers": [
+      { "answer": "Sao lùn vàng", "isCorrect": true },
+      { "answer": "Sao siêu khổng lồ", "isCorrect": false },
+      { "answer": "Sao neutron", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Sao chổi có đặc điểm gì nổi bật?",
+    "answers": [
+      { "answer": "Đuôi sáng dài", "isCorrect": true },
+      { "answer": "Nóng đỏ như Mặt Trời", "isCorrect": false },
+      { "answer": "Quay quanh Trái Đất", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Hành tinh nào có ngày dài hơn năm?",
+    "answers": [
+      { "answer": "Sao Kim", "isCorrect": true },
+      { "answer": "Sao Thủy", "isCorrect": false },
+      { "answer": "Sao Thiên Vương", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Du hành vào không gian có thể gây ảnh hưởng gì?",
+    "answers": [
+      { "answer": "Mất khối lượng cơ và xương", "isCorrect": true },
+      { "answer": "Tăng lực hấp dẫn", "isCorrect": false },
+      { "answer": "Làm ngắn tuổi thọ", "isCorrect": false }
+    ]
+  }
+]
