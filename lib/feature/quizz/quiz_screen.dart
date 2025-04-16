@@ -39,6 +39,19 @@ class _QuizScreenState extends State<QuizScreen> {
     super.dispose();
   }
 
+  void replayFunc() {
+    _quizCubit.saveRecord();
+    _quizCubit.loadQuiz();
+  }
+
+  void goHomeFunc() {
+    _quizCubit.saveRecord();
+    Navigator.of(context).popUntil(
+      (route) => route.isFirst,
+      // (route) => route.settings.name == '/home',
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -56,15 +69,8 @@ class _QuizScreenState extends State<QuizScreen> {
               DialogService.showOutOfTurnsDialog(
                 context: context,
                 purchaseFunc: () => _quizCubit.purchaseHeart(context: context),
-                replayFunc: () {
-                  _quizCubit.loadQuiz();
-                },
-                goHomeFunc: () {
-                  Navigator.of(context).popUntil(
-                    (route) => route.isFirst,
-                    // (route) => route.settings.name == '/home',
-                  );
-                },
+                replayFunc: replayFunc,
+                goHomeFunc: goHomeFunc,
               );
             } else if (message == BlocMessage.outOfTurnsToChangeQuestion) {
               DialogService.showOutOfTurnsToChangeQuestion(
@@ -90,15 +96,8 @@ class _QuizScreenState extends State<QuizScreen> {
             } else if (message == BlocMessage.completeQuiz) {
               DialogService.showCompleteQuiz(
                 context: context,
-                replayFunc: () {
-                  _quizCubit.loadQuiz();
-                },
-                goHomeFunc: () {
-                  Navigator.of(context).popUntil(
-                    (route) => route.isFirst,
-                    // (route) => route.settings.name == '/home',
-                  );
-                },
+                replayFunc: replayFunc,
+                goHomeFunc: goHomeFunc,
               );
             }
           }
@@ -136,7 +135,9 @@ class _QuizScreenState extends State<QuizScreen> {
                         children: [
                           Padding(
                             padding: EdgeInsets.only(right: 8.w),
-                            child: const CancelButton(),
+                            child: CancelButton(
+                              onTap: () => _quizCubit.saveRecord(),
+                            ),
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
@@ -148,22 +149,19 @@ class _QuizScreenState extends State<QuizScreen> {
                                               state.records?.isNotEmpty == true)
                                           ? state.records!
                                           : [];
-                                  return records.isNotEmpty
-                                      ? InkWell(
-                                          onTap: () => Navigator.of(context)
-                                              .push(MaterialPageRoute(
-                                            builder: (context) =>
-                                                QuizRecordScreen(
-                                              records: records,
-                                            ),
-                                          )),
-                                          child: Icon(
-                                            Icons.emoji_events,
-                                            color: const Color(0xffeead63),
-                                            size: 36.w,
-                                          ),
-                                        )
-                                      : const SizedBox.shrink();
+                                  return InkWell(
+                                    onTap: () => Navigator.of(context)
+                                        .push(MaterialPageRoute(
+                                      builder: (context) => QuizRecordScreen(
+                                        records: records,
+                                      ),
+                                    )),
+                                    child: Icon(
+                                      Icons.emoji_events,
+                                      color: const Color(0xffeead63),
+                                      size: 36.w,
+                                    ),
+                                  );
                                 },
                               ),
                               SizedBox(

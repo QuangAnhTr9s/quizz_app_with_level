@@ -9,15 +9,22 @@ class CancelButton extends StatelessWidget {
     this.colorBorder,
     this.colorIcon,
     this.iconSize,
+    this.onTap,
   });
 
   final Color? colorBorder;
   final Color? colorIcon;
   final double? iconSize;
-
+  final Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return CustomBtnBack(
+      onTap: () {
+        if (onTap != null) {
+          onTap!();
+        }
+        Navigator.pop(context);
+      },
       colorBorder: colorBorder ?? Colors.white,
       iconSize: iconSize ?? 30.w,
       icon: Icon(Icons.close,

@@ -34,7 +34,6 @@ class QuizCubit extends Cubit<QuizState> {
   void nextQuestion() {
     /// call when choose correct answer or click change question button
     if (state is QuizLoaded) {
-      saveRecord();
       if (state.indexQuestion >= state.questions!.length - 1) {
         emit((state as QuizLoaded).copyWith(message: BlocMessage.completeQuiz));
       } else {
@@ -160,8 +159,8 @@ class QuizCubit extends Cubit<QuizState> {
   Future<void> saveRecord() async {
     if (state is QuizLoaded) {
       List<QuizRecord> records = (state as QuizLoaded).records ?? [];
-      int newRecordCount = state.indexQuestion +
-          1; // save record before change question => +1, ex: indexQuestion = 0=> newRecordCount = 1
+      int newRecordCount =
+          state.indexQuestion; // ex: indexQuestion = 0 => newRecordCount = 0
       final maxCorrect = records.isEmpty
           ? 0
           : records
@@ -187,6 +186,10 @@ class QuizCubit extends Cubit<QuizState> {
     final jsonString = prefs.getString('quiz_records');
     if (jsonString == null) return [];
     final List<dynamic> decoded = jsonDecode(jsonString);
-    return decoded.map((json) => QuizRecord.fromJson(json)).toList();
+
+    List<QuizRecord> records =
+        decoded.map((json) => QuizRecord.fromJson(json)).toList();
+    records.sort((a, b) => b.correctAnswers.compareTo(a.correctAnswers));
+    return records;
   }
 }
