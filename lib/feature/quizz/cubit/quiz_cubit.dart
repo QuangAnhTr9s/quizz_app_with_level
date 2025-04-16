@@ -6,9 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quizz_app/cubits/user/user_cubit.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../commons/constant.dart';
 import '../models/quiz.dart';
+import '../models/quiz_record.dart';
 
 part 'quiz_state.dart';
 
@@ -30,6 +32,7 @@ class QuizCubit extends Cubit<QuizState> {
   void nextQuestion() {
     /// call when choose correct answer or click change question button
     if (state is QuizLoaded) {
+      saveRecord();
       if (state.indexQuestion >= state.questions!.length - 1) {
         emit((state as QuizLoaded).copyWith(message: BlocMessage.completeQuiz));
       } else {
@@ -149,5 +152,35 @@ class QuizCubit extends Cubit<QuizState> {
 
   void resetMessage() {
     emit((state as QuizLoaded).copyWith(message: ''));
+  }
+
+  /// record
+  Future<void> saveRecord() async {
+    List<QuizRecord> records = await loadRecords();
+    int newRecordCount = state.indexQuestion +
+        1; // save record before change question => +1, ex: indexQuestion = 0=> newRecordCount = 1
+    final maxCorrect = records.isEmpty
+        ? 0
+        : records.map((e) => e.correctAnswers).reduce((a, b) => a > b ? a : b);
+
+    if (newRecordCount > maxCorrect) {
+      records.add(QuizRecord(
+          correctAnswers: newRecordCount, createdAt: DateTime.now()));
+      await saveRecordsToPrefs(records);
+    }
+  }
+
+  Future<void> saveRecordsToPrefs(List<QuizRecord> records) async {
+    final prefs = await SharedPreferences.getInstance();
+    final jsonString = jsonEncode(records.map((r) => r.toJson()).toList());
+    await prefs.setString('quiz_records', jsonString);
+  }
+
+  Future<List<QuizRecord>> loadRecords() async {
+    final prefs = await SharedPreferences.getInstance();
+    final jsonString = prefs.getString('quiz_records');
+    if (jsonString == null) return [];
+    final List<dynamic> decoded = jsonDecode(jsonString);
+    return decoded.map((json) => QuizRecord.fromJson(json)).toList();
   }
 }
