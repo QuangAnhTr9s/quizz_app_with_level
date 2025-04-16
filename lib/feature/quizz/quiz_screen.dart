@@ -230,7 +230,7 @@ class _QuizScreenState extends State<QuizScreen> {
                           Padding(
                             padding: EdgeInsets.symmetric(vertical: 16.h),
                             child: Text(
-                              "Câu hỏi ${indexVocabulary + 1}/${questions.length}",
+                              "${indexVocabulary + 1}/${questions.length}",
                               style: TextStyle(
                                 fontSize: 16.sp,
                                 color: Colors.white,

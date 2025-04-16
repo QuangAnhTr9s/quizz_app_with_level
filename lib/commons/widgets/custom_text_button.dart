@@ -79,6 +79,7 @@ class CustomAnimationButton extends StatelessWidget {
         child: child ??
             Text(
               '$text',
+              textAlign: TextAlign.center,
               textScaler: textScaler,
               style: textStyle ??
                   TextStyle(

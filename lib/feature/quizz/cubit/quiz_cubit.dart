@@ -22,6 +22,13 @@ class QuizCubit extends Cubit<QuizState> {
     if (questions != null) {
       List<QuizRecord> records = await loadRecords();
       questions.shuffle();
+      questions = questions.take(20).toList();
+      questions = questions.map(
+        (e) {
+          e.answers?.shuffle();
+          return e;
+        },
+      ).toList();
       emit(QuizLoaded(
         questions: questions,
         records: records,
@@ -35,6 +42,7 @@ class QuizCubit extends Cubit<QuizState> {
     /// call when choose correct answer or click change question button
     if (state is QuizLoaded) {
       if (state.indexQuestion >= state.questions!.length - 1) {
+        saveRecord(index: state.questions!.length);
         emit((state as QuizLoaded).copyWith(message: BlocMessage.completeQuiz));
       } else {
         emit((state as QuizLoaded).copyWith(
@@ -156,10 +164,10 @@ class QuizCubit extends Cubit<QuizState> {
   }
 
   /// record
-  Future<void> saveRecord() async {
+  Future<void> saveRecord({int? index}) async {
     if (state is QuizLoaded) {
       List<QuizRecord> records = (state as QuizLoaded).records ?? [];
-      int newRecordCount =
+      int newRecordCount = index ??
           state.indexQuestion; // ex: indexQuestion = 0 => newRecordCount = 0
       final maxCorrect = records.isEmpty
           ? 0
