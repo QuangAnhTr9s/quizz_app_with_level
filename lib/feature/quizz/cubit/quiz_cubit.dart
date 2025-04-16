@@ -20,9 +20,11 @@ class QuizCubit extends Cubit<QuizState> {
   Future<void> loadQuiz() async {
     List<Quiz>? questions = await loadQuizData('assets/data/questions.json');
     if (questions != null) {
+      List<QuizRecord> records = await loadRecords();
       questions.shuffle();
       emit(QuizLoaded(
         questions: questions,
+        records: records,
       ));
     } else {
       emit(QuizError());
@@ -156,17 +158,21 @@ class QuizCubit extends Cubit<QuizState> {
 
   /// record
   Future<void> saveRecord() async {
-    List<QuizRecord> records = await loadRecords();
-    int newRecordCount = state.indexQuestion +
-        1; // save record before change question => +1, ex: indexQuestion = 0=> newRecordCount = 1
-    final maxCorrect = records.isEmpty
-        ? 0
-        : records.map((e) => e.correctAnswers).reduce((a, b) => a > b ? a : b);
+    if (state is QuizLoaded) {
+      List<QuizRecord> records = (state as QuizLoaded).records ?? [];
+      int newRecordCount = state.indexQuestion +
+          1; // save record before change question => +1, ex: indexQuestion = 0=> newRecordCount = 1
+      final maxCorrect = records.isEmpty
+          ? 0
+          : records
+              .map((e) => e.correctAnswers)
+              .reduce((a, b) => a > b ? a : b);
 
-    if (newRecordCount > maxCorrect) {
-      records.add(QuizRecord(
-          correctAnswers: newRecordCount, createdAt: DateTime.now()));
-      await saveRecordsToPrefs(records);
+      if (newRecordCount > maxCorrect) {
+        records.add(QuizRecord(
+            correctAnswers: newRecordCount, createdAt: DateTime.now()));
+        await saveRecordsToPrefs(records);
+      }
     }
   }
 

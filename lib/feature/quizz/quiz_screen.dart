@@ -10,6 +10,8 @@ import '../../cubits/user/user_cubit.dart';
 import '../purchase/coin_package_screen.dart';
 import 'cubit/quiz_cubit.dart';
 import 'dialogs/dialog_services.dart';
+import 'models/quiz_record.dart';
+import 'widgets/quiz_record_screen.dart';
 
 class QuizScreen extends StatefulWidget {
   const QuizScreen({
@@ -136,52 +138,88 @@ class _QuizScreenState extends State<QuizScreen> {
                             padding: EdgeInsets.only(right: 8.w),
                             child: const CancelButton(),
                           ),
-                          InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const CoinPackageScreen(),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              BlocBuilder<QuizCubit, QuizState>(
+                                builder: (context, state) {
+                                  List<QuizRecord> records =
+                                      (state is QuizLoaded &&
+                                              state.records?.isNotEmpty == true)
+                                          ? state.records!
+                                          : [];
+                                  return records.isNotEmpty
+                                      ? InkWell(
+                                          onTap: () => Navigator.of(context)
+                                              .push(MaterialPageRoute(
+                                            builder: (context) =>
+                                                QuizRecordScreen(
+                                              records: records,
+                                            ),
+                                          )),
+                                          child: Icon(
+                                            Icons.emoji_events,
+                                            color: const Color(0xffeead63),
+                                            size: 36.w,
+                                          ),
+                                        )
+                                      : const SizedBox.shrink();
+                                },
+                              ),
+                              SizedBox(
+                                width: 16.w,
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const CoinPackageScreen(),
+                                    ),
+                                  );
+                                },
+                                child: Container(
+                                  padding: EdgeInsets.only(left: 8.w),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(24.r),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      BlocBuilder<UserCubit, UserState>(
+                                        builder: (context, state) {
+                                          if (state is UserLoaded) {
+                                            return Text(
+                                              state.user.coins
+                                                  .toInt()
+                                                  .toString(),
+                                              style: TextStyle(
+                                                  fontSize: 16.sp,
+                                                  color: Colors.black),
+                                            );
+                                          } else {
+                                            return const SizedBox();
+                                          }
+                                        },
+                                      ),
+                                      SizedBox(
+                                        width: 4.w,
+                                      ),
+                                      Image.asset(
+                                        'assets/dollar.png',
+                                        height: 30.w,
+                                        width: 30.w,
+                                        fit: BoxFit.fill,
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              );
-                            },
-                            child: Container(
-                              padding: EdgeInsets.only(left: 8.w),
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(24.r),
                               ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  BlocBuilder<UserCubit, UserState>(
-                                    builder: (context, state) {
-                                      if (state is UserLoaded) {
-                                        return Text(
-                                          state.user.coins.toInt().toString(),
-                                          style: TextStyle(
-                                              fontSize: 16.sp,
-                                              color: Colors.black),
-                                        );
-                                      } else {
-                                        return const SizedBox();
-                                      }
-                                    },
-                                  ),
-                                  SizedBox(
-                                    width: 4.w,
-                                  ),
-                                  Image.asset(
-                                    'assets/dollar.png',
-                                    height: 30.w,
-                                    width: 30.w,
-                                    fit: BoxFit.fill,
-                                  ),
-                                ],
-                              ),
-                            ),
+                            ],
                           ),
                         ],
                       ),

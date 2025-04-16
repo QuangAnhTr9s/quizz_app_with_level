@@ -24,9 +24,11 @@ class QuizInitial extends QuizState {
 
 class QuizLoaded extends QuizState {
   final String? message;
+  final List<QuizRecord>? records;
 
   const QuizLoaded({
     this.message,
+    this.records,
     super.questions,
     super.indexQuestion,
     super.heart,
@@ -41,6 +43,7 @@ class QuizLoaded extends QuizState {
     int? heart,
     int? changeQuizCount,
     int? eliminateAnswerCount,
+    List<QuizRecord>? records,
   }) {
     return QuizLoaded(
       message: message ?? this.message,
@@ -49,6 +52,7 @@ class QuizLoaded extends QuizState {
       heart: heart ?? this.heart,
       changeQuizCount: changeQuizCount ?? this.changeQuizCount,
       eliminateAnswerCount: eliminateAnswerCount ?? this.eliminateAnswerCount,
+      records: records ?? this.records,
     );
   }
 
@@ -61,6 +65,7 @@ class QuizLoaded extends QuizState {
         message,
         changeQuizCount,
         eliminateAnswerCount,
+        records,
       ];
 }
 
