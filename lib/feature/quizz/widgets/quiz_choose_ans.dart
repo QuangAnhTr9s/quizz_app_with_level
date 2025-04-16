@@ -40,14 +40,14 @@ class _QuizChooseAnsState extends State<QuizChooseAns> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.only(bottom: 16.h),
+                padding: EdgeInsets.symmetric(vertical: 16.h),
                 child: Text(
-                  'Choose the correct answer',
-                  style: TextStyle(color: AppColors.black, fontSize: 16.sp),
+                  'Chọn đáp án đúng',
+                  style: TextStyle(color: AppColors.black, fontSize: 16.sp, fontWeight: FontWeight.w400,),
                 ),
               ),
               ListView.separated(
-                padding: EdgeInsets.symmetric(vertical: 20.h),
+                padding: EdgeInsets.symmetric(vertical: 20.h).copyWith(top: 0),
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 separatorBuilder: (context, index) => SizedBox(

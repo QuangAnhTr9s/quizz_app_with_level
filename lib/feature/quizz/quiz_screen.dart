@@ -15,6 +15,7 @@ class QuizScreen extends StatefulWidget {
   const QuizScreen({
     super.key,
   });
+
   static const routeName = '/quizScreen';
 
   @override
@@ -193,9 +194,12 @@ class _QuizScreenState extends State<QuizScreen> {
                           Padding(
                             padding: EdgeInsets.symmetric(vertical: 16.h),
                             child: Text(
-                              "Correct Answer ${indexVocabulary + 1}/${questions.length}",
+                              "Câu hỏi ${indexVocabulary + 1}/${questions.length}",
                               style: TextStyle(
-                                  fontSize: 16.sp, color: Colors.white),
+                                fontSize: 16.sp,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
                           ),
                           Padding(
