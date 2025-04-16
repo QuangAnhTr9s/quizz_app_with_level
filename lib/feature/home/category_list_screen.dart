@@ -215,9 +215,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                               onTap: () {
                                 if (isUnlocked) {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => QuizScreen(
-                                      category: cat,
-                                    ),
+                                    builder: (context) => const QuizScreen(),
                                   ));
                                 } else {
                                   _showPurchaseDialog(cat);

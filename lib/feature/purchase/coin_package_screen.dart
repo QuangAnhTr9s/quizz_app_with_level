@@ -65,7 +65,7 @@ class _CoinPackageScreenState extends State<CoinPackageScreen> {
                       onTap: () {
                         PurchaseBookServices()
                             .purchase(coinPackage: pkg, context: context);
-                        context.read<UserCubit>().addCoins(200);
+                        // context.read<UserCubit>().addCoins(200);
                       },
                       child: Container(
                         decoration: BoxDecoration(

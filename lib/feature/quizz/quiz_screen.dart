@@ -3,7 +3,6 @@ import 'package:quizz_app/commons/constant.dart';
 import 'package:quizz_app/commons/widgets/cancel_button.dart';
 import 'package:quizz_app/feature/quizz/widgets/quiz_widget.dart';
 
-import '../../../models/category_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,9 +12,10 @@ import 'cubit/quiz_cubit.dart';
 import 'dialogs/dialog_services.dart';
 
 class QuizScreen extends StatefulWidget {
-  const QuizScreen({super.key, required this.category});
-
-  final Category category;
+  const QuizScreen({
+    super.key,
+  });
+  static const routeName = '/quizScreen';
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
