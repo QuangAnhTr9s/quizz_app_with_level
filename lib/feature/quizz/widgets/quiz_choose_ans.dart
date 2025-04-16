@@ -120,14 +120,17 @@ class AnswerButton extends StatelessWidget {
         borderColor = AppColors.stateErrorColor;
       }
     }
+    bool canTap = answer.canShow == true && isSelected == false;
     return TextButtonWithBotBorder(
       text: answer.answer ?? '',
       bgColor: bgColor,
       borderColor: borderColor,
       onTap: () {
-        onTap(answer.isCorrect ?? false);
+        if (canTap) {
+          onTap(answer.isCorrect ?? false);
+        }
       },
-      onAnimation: answer.canShow,
+      onAnimation: canTap,
     );
   }
 }
