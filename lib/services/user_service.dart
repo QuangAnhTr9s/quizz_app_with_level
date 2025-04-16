@@ -77,6 +77,16 @@ class UserService {
     }
   }
 
+  static Future<void> spendCoin({required int coins}) async {
+    try {
+      int newCoins = user.coins - coins;
+      user = user.copyWith(coins: newCoins);
+      await _saveUser();
+    } catch (e) {
+      debugPrint('Error adding coins: $e');
+    }
+  }
+
   static Future<void> purchaseTopic({required Category topic}) async {
     try {
       int newCoins = user.coins - topic.price;

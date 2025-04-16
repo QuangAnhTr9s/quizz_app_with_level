@@ -11,8 +11,8 @@ abstract class QuizState extends Equatable {
     this.questions,
     this.indexQuestion = 0,
     this.heart = 3,
-    this.changeQuizCount = 3,
-    this.eliminateAnswerCount = 5,
+    this.changeQuizCount = 2,
+    this.eliminateAnswerCount = 2,
   });
 }
 

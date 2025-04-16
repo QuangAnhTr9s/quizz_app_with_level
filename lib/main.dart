@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quizz_app/commons/navigator_support.dart';
 
 import 'commons/text_to_speech.dart';
 import 'cubits/user/user_cubit.dart';
@@ -85,12 +86,27 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    return const HomePage();
+    return NavigatorSupport(
+      initialRoute: HomePage.routeName,
+      onGenerateRoute: (settings) {
+        switch (settings.name) {
+          case HomePage.routeName:
+            return MaterialPageRoute(
+              builder: (context) => const HomePage(),
+            );
+          default:
+            return MaterialPageRoute(
+              builder: (context) => const HomePage(),
+            );
+        }
+      },
+    );
   }
 }
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
+  static const routeName = '/home';
 
   @override
   State<HomePage> createState() => _HomePageState();

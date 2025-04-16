@@ -2,8 +2,10 @@ import 'dart:convert';
 
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quizz_app/cubits/user/user_cubit.dart';
 
 import '../../../commons/constant.dart';
 import '../models/quiz.dart';
@@ -51,19 +53,21 @@ class QuizCubit extends Cubit<QuizState> {
   void eliminateAnswer() {
     if (state is QuizLoaded && state.questions?.isNotEmpty == true) {
       if (state.eliminateAnswerCount > 0) {
-        int newEliminateAnswerCount = state.eliminateAnswerCount - 1;
-        emit((state as QuizLoaded)
-            .copyWith(eliminateAnswerCount: newEliminateAnswerCount));
-
         /// get new answer with one of wrong answer hidden
         List<Answer> newAnswers = eliminateOneWrongAnswer(
             state.questions![state.indexQuestion].answers ?? []);
+        if (newAnswers.isNotEmpty &&
+            newAnswers != state.questions![state.indexQuestion].answers) {
+          int newEliminateAnswerCount = state.eliminateAnswerCount - 1;
+          emit((state as QuizLoaded)
+              .copyWith(eliminateAnswerCount: newEliminateAnswerCount));
 
-        /// update questions
-        List<Quiz> questions = List<Quiz>.from(state.questions!);
-        questions[state.indexQuestion] =
-            state.questions![state.indexQuestion].copyWith(answers: newAnswers);
-        emit((state as QuizLoaded).copyWith(questions: questions));
+          /// update questions
+          List<Quiz> questions = List<Quiz>.from(state.questions!);
+          questions[state.indexQuestion] = state.questions![state.indexQuestion]
+              .copyWith(answers: newAnswers);
+          emit((state as QuizLoaded).copyWith(questions: questions));
+        }
       } else {
         emit((state as QuizLoaded)
             .copyWith(message: BlocMessage.outOfTurnsEliminateAnswer));
@@ -111,5 +115,35 @@ class QuizCubit extends Cubit<QuizState> {
     return answers.map((a) {
       return a.answer == toRemove.answer ? a.copyWith(canShow: false) : a;
     }).toList();
+  }
+
+  /// purchase
+
+  void purchaseHeart({required BuildContext context}) {
+    if (state is QuizLoaded) {
+      int newHeart = state.heart + 2;
+      emit((state as QuizLoaded).copyWith(heart: newHeart));
+      context.read<UserCubit>().spendCoins(100);
+    }
+  }
+
+  void purchaseChangeQuizCount({required BuildContext context}) {
+    if (state is QuizLoaded) {
+      int newCount = state.changeQuizCount + 2;
+      emit((state as QuizLoaded).copyWith(changeQuizCount: newCount));
+      context.read<UserCubit>().spendCoins(100);
+    }
+  }
+
+  void purchaseEliminateAnswerCount({required BuildContext context}) {
+    if (state is QuizLoaded) {
+      int newCount = state.eliminateAnswerCount + 2;
+      emit((state as QuizLoaded).copyWith(eliminateAnswerCount: newCount));
+      context.read<UserCubit>().spendCoins(100);
+    }
+  }
+
+  void resetMessage() {
+    emit((state as QuizLoaded).copyWith(message: ''));
   }
 }

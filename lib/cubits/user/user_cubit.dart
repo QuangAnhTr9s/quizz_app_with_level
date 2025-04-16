@@ -20,6 +20,11 @@ class UserCubit extends Cubit<UserState> {
     emit(UserLoaded(user: UserService.user));
   }
 
+  Future<void> spendCoins(int coins) async {
+    await UserService.spendCoin(coins: coins);
+    emit(UserLoaded(user: UserService.user));
+  }
+
   Future<void> purchaseTopic(Category topic) async {
     await UserService.purchaseTopic(topic: topic);
     emit(UserLoaded(user: UserService.user));

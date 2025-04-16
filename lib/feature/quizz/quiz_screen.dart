@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quizz_app/commons/constant.dart';
 import 'package:quizz_app/commons/widgets/cancel_button.dart';
 import 'package:quizz_app/feature/quizz/widgets/quiz_widget.dart';
 
@@ -47,11 +48,58 @@ class _QuizScreenState extends State<QuizScreen> {
         listener: (context, state) {
           /// listen message
           if (state is QuizLoaded && state.message?.isNotEmpty == true) {
-            DialogService.showQuizDialog(
-              context: context,
-              message: state.message!,
-            );
+            String message = state.message!;
+            if (message == BlocMessage.outOfTurns) {
+              DialogService.showOutOfTurnsDialog(
+                context: context,
+                purchaseFunc: () => _quizCubit.purchaseHeart(context: context),
+                replayFunc: () {
+                  _quizCubit.loadQuiz();
+                },
+                goHomeFunc: () {
+                  Navigator.of(context).popUntil(
+                    (route) => route.isFirst,
+                    // (route) => route.settings.name == '/home',
+                  );
+                },
+              );
+            } else if (message == BlocMessage.outOfTurnsToChangeQuestion) {
+              DialogService.showOutOfTurnsToChangeQuestion(
+                context: context,
+                onTap: () {
+                  _quizCubit.purchaseChangeQuizCount(context: context);
+                },
+              );
+            } else if (message == BlocMessage.outOfTurnsEliminateAnswer) {
+              DialogService.showOutOfTurnsEliminateAnswer(
+                context: context,
+                onTap: () {
+                  _quizCubit.purchaseEliminateAnswerCount(context: context);
+                },
+              );
+            } else if (message == BlocMessage.lastTurn) {
+              DialogService.showLastTurnDialog(
+                context: context,
+                onTap: () {
+                  _quizCubit.purchaseHeart(context: context);
+                },
+              );
+            } else if (message == BlocMessage.completeQuiz) {
+              DialogService.showCompleteQuiz(
+                context: context,
+                replayFunc: () {
+                  _quizCubit.loadQuiz();
+                },
+                goHomeFunc: () {
+                  Navigator.of(context).popUntil(
+                    (route) => route.isFirst,
+                    // (route) => route.settings.name == '/home',
+                  );
+                },
+              );
+            }
           }
+          _quizCubit.resetMessage();
         },
         child: Scaffold(
           body: Container(

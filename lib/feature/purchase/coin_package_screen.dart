@@ -1,5 +1,7 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../commons/widgets/custom_btn_back.dart';
+import '../../cubits/user/user_cubit.dart';
 import '../../purchase/models/coin_package.dart';
 import '../../purchase/purchase_book_services.dart';
 import '../../utils/constant.dart';
@@ -63,7 +65,7 @@ class _CoinPackageScreenState extends State<CoinPackageScreen> {
                       onTap: () {
                         PurchaseBookServices()
                             .purchase(coinPackage: pkg, context: context);
-                        // context.read<UserCubit>().addCoins(200);
+                        context.read<UserCubit>().addCoins(200);
                       },
                       child: Container(
                         decoration: BoxDecoration(
