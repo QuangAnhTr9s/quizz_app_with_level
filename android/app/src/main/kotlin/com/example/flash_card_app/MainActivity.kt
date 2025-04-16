@@ -1,4 +1,4 @@
-package com.app.quizzapp
+package com.app.knowledgeChallenge
 
 import io.flutter.embedding.android.FlutterActivity
 

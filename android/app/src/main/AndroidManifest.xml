@@ -8,7 +8,7 @@
         </intent>
     </queries>
     <application
-        android:label="Quizz App"
+        android:label="Knowledge Challenge"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:enableOnBackInvokedCallback="true"
