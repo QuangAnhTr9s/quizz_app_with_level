@@ -226,11 +226,6 @@ class DialogService {
                           fontWeight: FontWeight.w700,
                         ),
                       ),
-                      CancelButton(
-                        iconSize: 30.sp,
-                        colorBorder: Colors.black,
-                        colorIcon: Colors.black,
-                      ),
                     ],
                   ),
                   Padding(

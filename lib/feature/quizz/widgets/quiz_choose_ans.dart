@@ -43,7 +43,11 @@ class _QuizChooseAnsState extends State<QuizChooseAns> {
                 padding: EdgeInsets.symmetric(vertical: 16.h),
                 child: Text(
                   'Chọn đáp án đúng',
-                  style: TextStyle(color: AppColors.black, fontSize: 16.sp, fontWeight: FontWeight.w400,),
+                  style: TextStyle(
+                    color: AppColors.black,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
               ),
               ListView.separated(
@@ -59,19 +63,22 @@ class _QuizChooseAnsState extends State<QuizChooseAns> {
                   isSelected: indexSelectedList?.isNotEmpty == true &&
                       indexSelectedList!.contains(index),
                   answer: answers[index],
-                  onTap: (isCorrect) {
+                  onTap: (isCorrect) async {
+                    setState(() {
+                      if (indexSelectedList == null) {
+                        indexSelectedList = [index];
+                      } else if (indexSelectedList!.contains(index) != true) {
+                        indexSelectedList!.add(index);
+                      }
+                    });
                     if (isCorrect) {
-                      indexSelectedList = null;
-                      context.read<QuizCubit>().nextQuestion();
+                      await Future.delayed(const Duration(milliseconds: 500));
+                      if (context.mounted) {
+                        indexSelectedList = null;
+                        context.read<QuizCubit>().nextQuestion();
+                      }
                     } else {
                       context.read<QuizCubit>().useHeart();
-                      setState(() {
-                        if (indexSelectedList == null) {
-                          indexSelectedList = [index];
-                        } else if (indexSelectedList!.contains(index) != true) {
-                          indexSelectedList!.add(index);
-                        }
-                      });
                     }
                   },
                 ),

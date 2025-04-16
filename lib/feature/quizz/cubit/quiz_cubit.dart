@@ -30,9 +30,13 @@ class QuizCubit extends Cubit<QuizState> {
   void nextQuestion() {
     /// call when choose correct answer or click change question button
     if (state is QuizLoaded) {
-      emit((state as QuizLoaded).copyWith(
-          indexQuestion:
-              (state.indexQuestion + 1).clamp(0, state.questions!.length - 1)));
+      if (state.indexQuestion >= state.questions!.length - 1) {
+        emit((state as QuizLoaded).copyWith(message: BlocMessage.completeQuiz));
+      } else {
+        emit((state as QuizLoaded).copyWith(
+            indexQuestion: (state.indexQuestion + 1)
+                .clamp(0, state.questions!.length - 1)));
+      }
     }
   }
 
