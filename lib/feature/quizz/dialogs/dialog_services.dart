@@ -242,7 +242,10 @@ class DialogService {
                   ),
                   ButtonWithBorder(
                     bgColor: Colors.white,
-                    onTap: purchaseFunc,
+                    onTap: () {
+                      Navigator.pop(context);
+                      purchaseFunc();
+                    },
                     child: SizedBox(
                       width: double.maxFinite,
                       child: RichText(
