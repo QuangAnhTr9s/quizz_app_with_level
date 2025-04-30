@@ -70,6 +70,7 @@ class PurchaseBookServices implements InAppPurchaseListener {
               ConfigKey.keySub6Android,
             ]
           : [
+              ConfigKey.keyCoin0,
               ConfigKey.keyCoin1,
               ConfigKey.keyCoin2,
               ConfigKey.keyCoin3,
@@ -90,6 +91,7 @@ class PurchaseBookServices implements InAppPurchaseListener {
               ConfigKey.keySub6Ios,
             ]
           : [
+              ConfigKey.keyCoin0,
               ConfigKey.keyCoin1,
               ConfigKey.keyCoin2,
               ConfigKey.keyCoin3,

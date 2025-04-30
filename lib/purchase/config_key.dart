@@ -17,6 +17,7 @@ class ConfigKey {
   static const String keySub6Android = '2kword_sub_6_android';
 
   /// coin
+  static const String keyCoin0 = 'coin_package_0';
   static const String keyCoin1 = 'coin_package_1';
   static const String keyCoin2 = 'coin_package_2';
   static const String keyCoin3 = 'coin_package_3';
