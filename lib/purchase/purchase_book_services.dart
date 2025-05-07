@@ -179,8 +179,8 @@ class PurchaseBookServices implements InAppPurchaseListener {
       } else {
         _currentCoinPackage =
             coinPackage ?? _currentCoinPackage ?? listCoinPackages[0];
-        index = listCoinPackages.indexWhere(
-            (element) => element.keyStore == _currentCoinPackage?.keyStore);
+        index = InAppPurchaseModule.getInstance().products.indexWhere(
+            (element) => element.id == _currentCoinPackage?.keyStore);
       }
       productIndex = index != -1 ? index : productIndex;
 
