@@ -76,9 +76,6 @@ class PurchaseBookServices implements InAppPurchaseListener {
               ConfigKey.keyCoin3,
               ConfigKey.keyCoin4,
               ConfigKey.keyCoin5,
-              ConfigKey.keyCoin6,
-              ConfigKey.keyCoin7,
-              ConfigKey.keyCoin8,
             ];
     } else if (Platform.isIOS) {
       InAppPurchaseModule.getInstance().kProductIds = isBuyNonConsumable
@@ -97,9 +94,6 @@ class PurchaseBookServices implements InAppPurchaseListener {
               ConfigKey.keyCoin3,
               ConfigKey.keyCoin4,
               ConfigKey.keyCoin5,
-              ConfigKey.keyCoin6,
-              ConfigKey.keyCoin7,
-              ConfigKey.keyCoin8,
             ];
     }
   }
