@@ -42,6 +42,8 @@ dependencies:
   cached_network_image: ^3.4.1
   shared_preferences: ^2.5.3
   intl: ^0.20.2
+  google_fonts: ^6.2.1
+  flutter_svg: ^2.1.0
 
   # state
   flutter_bloc: ^9.1.0
