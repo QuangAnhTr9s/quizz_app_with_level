@@ -1,0 +1,74 @@
+[
+  {
+    "level": 1,
+    "name": "Beginner's Breeze",
+    "hp": 5,
+    "change_question": 3,
+    "eliminate_answer": 3,
+    "question_count": 10,
+    "avatar": "1.png"
+  },
+  {
+    "level": 2,
+    "name": "Casual Cruise",
+    "hp": 5,
+    "change_question": 3,
+    "eliminate_answer": 2,
+    "question_count": 12,
+    "avatar": "2.png"
+  },
+  {
+    "level": 3,
+    "name": "Steady Steps",
+    "hp": 4,
+    "change_question": 2,
+    "eliminate_answer": 2,
+    "question_count": 14,
+    "avatar": "3.png"
+  },
+  {
+    "level": 4,
+    "name": "Tricky Trail",
+    "hp": 4,
+    "change_question": 2,
+    "eliminate_answer": 1,
+    "question_count": 16,
+    "avatar": "4.png"
+  },
+  {
+    "level": 5,
+    "name": "Challenger's Choice",
+    "hp": 4,
+    "change_question": 1,
+    "eliminate_answer": 1,
+    "question_count": 18,
+    "avatar": "5.png"
+  },
+  {
+    "level": 6,
+    "name": "Expert Edge",
+    "hp": 3,
+    "change_question": 1,
+    "eliminate_answer": 1,
+    "question_count": 20,
+    "avatar": "6.png"
+  },
+  {
+    "level": 7,
+    "name": "Master's Maze",
+    "hp": 3,
+    "change_question": 1,
+    "eliminate_answer": 1,
+    "question_count": 24,
+    "avatar": "7.png"
+  },
+  {
+    "level": 8,
+    "name": "Legendary Level",
+    "hp": 3,
+    "change_question": 1,
+    "eliminate_answer": 1,
+    "question_count": 28,
+    "avatar": "8.png"
+  }
+]
