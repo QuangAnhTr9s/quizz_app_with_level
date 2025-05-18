@@ -1,4 +1,4 @@
-package com.phanthanhapp.knowledgeChallenge
+package com.phanthanhapp.trialsOfTheMind
 
 import io.flutter.embedding.android.FlutterActivity
 
