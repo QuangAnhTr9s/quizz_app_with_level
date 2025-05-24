@@ -24,8 +24,8 @@ class DialogService {
           ),
           insetPadding: REdgeInsets.symmetric(horizontal: 20.w),
           child: HeartContentDialog(
-            title: 'Loại trừ câu sai',
-            content: 'Bạn đã hết lượt loại trừ !\nMua thêm 2 lượt ?',
+            title: 'Eliminate Wrong Answers',
+            content: 'You are out of elimination turns!\nBuy 2 more turns?',
             price: 100,
             onTap: onTap,
           ),
@@ -49,8 +49,8 @@ class DialogService {
           ),
           insetPadding: REdgeInsets.symmetric(horizontal: 20.w),
           child: HeartContentDialog(
-            title: 'Đổi câu hỏi',
-            content: 'Bạn đã hết lượt đổi câu hỏi!\nMua thêm 2 lượt ?',
+            title: 'Change Question',
+            content: 'You are out of question change turns!\nBuy 2 more turns?',
             price: 100,
             onTap: onTap,
           ),
@@ -74,8 +74,8 @@ class DialogService {
           ),
           insetPadding: REdgeInsets.symmetric(horizontal: 20.w),
           child: HeartContentDialog(
-            title: 'Bạn còn 1 máu',
-            content: 'Bạn có muốn mua thêm 2 máu không ?',
+            title: 'You Have 1 Life Left',
+            content: 'Would you like to buy 2 more lives?',
             price: 100,
             onTap: onTap,
           ),
@@ -111,7 +111,7 @@ class DialogService {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Chúc mừng',
+                        'Congratulations',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 20.sp,
@@ -130,7 +130,7 @@ class DialogService {
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 16.sp),
                     child: Text(
-                      'Bạn đã trả lời đúng hết 20 câu hỏi',
+                      'You have correctly answered all 20 questions',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 14.sp,
@@ -148,7 +148,7 @@ class DialogService {
                     child: SizedBox(
                       width: double.maxFinite,
                       child: Text(
-                        'Chơi lại',
+                        'Play Again',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 16.sp,
@@ -158,9 +158,7 @@ class DialogService {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: 16.h,
-                  ),
+                  SizedBox(height: 16.h),
                   ButtonWithBorder(
                     bgColor: Colors.white,
                     onTap: () {
@@ -170,7 +168,7 @@ class DialogService {
                     child: SizedBox(
                       width: double.maxFinite,
                       child: Text(
-                        'Màn hình chính',
+                        'Home Screen',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 16.sp,
@@ -217,7 +215,7 @@ class DialogService {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Bạn đã hết máu',
+                        'You are out of lives',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 20.sp,
@@ -231,7 +229,7 @@ class DialogService {
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 16.sp),
                     child: Text(
-                      'Bạn có muốn mua thêm 2 máu không?',
+                      'Would you like to buy 2 more lives?',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 14.sp,
@@ -258,29 +256,24 @@ class DialogService {
                             fontWeight: FontWeight.w600,
                           ),
                           children: [
-                            const TextSpan(
-                              text: 'Mua ',
-                            ),
+                            const TextSpan(text: 'Buy '),
                             WidgetSpan(
                               child: SizedBox(
-                                  height: 20.sp,
-                                  width: 20.sp,
-                                  child: Image.asset(
-                                    'assets/dollar.png',
-                                    fit: BoxFit.fill,
-                                  )),
+                                height: 20.sp,
+                                width: 20.sp,
+                                child: Image.asset(
+                                  'assets/dollar.png',
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
                             ),
-                            const TextSpan(
-                              text: ' 100 vàng',
-                            ),
+                            const TextSpan(text: ' 100 coins'),
                           ],
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: 16.h,
-                  ),
+                  SizedBox(height: 16.h),
                   ButtonWithBorder(
                     bgColor: Colors.white,
                     onTap: () {
@@ -290,7 +283,7 @@ class DialogService {
                     child: SizedBox(
                       width: double.maxFinite,
                       child: Text(
-                        'Chơi lại',
+                        'Play Again',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 16.sp,
@@ -300,9 +293,7 @@ class DialogService {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: 16.h,
-                  ),
+                  SizedBox(height: 16.h),
                   ButtonWithBorder(
                     bgColor: Colors.white,
                     onTap: () {
@@ -312,7 +303,7 @@ class DialogService {
                     child: SizedBox(
                       width: double.maxFinite,
                       child: Text(
-                        'Màn hình chính',
+                        'Home Screen',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 16.sp,
@@ -411,21 +402,18 @@ class _HeartContentDialogState extends State<HeartContentDialog> {
                       fontWeight: FontWeight.w600,
                     ),
                     children: [
-                      const TextSpan(
-                        text: 'Mua ',
-                      ),
+                      const TextSpan(text: 'Buy '),
                       WidgetSpan(
                         child: SizedBox(
-                            height: 20.sp,
-                            width: 20.sp,
-                            child: Image.asset(
-                              'assets/dollar.png',
-                              fit: BoxFit.fill,
-                            )),
+                          height: 20.sp,
+                          width: 20.sp,
+                          child: Image.asset(
+                            'assets/dollar.png',
+                            fit: BoxFit.fill,
+                          ),
+                        ),
                       ),
-                      TextSpan(
-                        text: ' ${widget.price} vàng',
-                      ),
+                      TextSpan(text: ' ${widget.price} coins'),
                     ],
                   ),
                 ),
