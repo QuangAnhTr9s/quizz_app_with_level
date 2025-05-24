@@ -9,8 +9,8 @@ class Quiz extends Equatable {
   factory Quiz.fromJson(Map<String, dynamic> json) {
     return Quiz(
       question: json['question'],
-      answers: json['answers'] != null
-          ? (json['answers'] as List).map((i) => Answer.fromJson(i)).toList()
+      answers: json['answer'] != null
+          ? (json['answer'] as List).map((i) => Answer.fromJson(i)).toList()
           : null,
     );
   }
@@ -42,8 +42,8 @@ class Answer extends Equatable {
 
   factory Answer.fromJson(Map<String, dynamic> json) {
     return Answer(
-      answer: json['answer'],
-      isCorrect: json['isCorrect'],
+      answer: json['value'],
+      isCorrect: json['correct'],
     );
   }
 

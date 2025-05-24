@@ -1,9 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:quizz_app/cubits/user/user_cubit.dart';
+import 'package:quizz_app/commons/widgets/coin_button.dart';
 import 'package:quizz_app/feature/quizz/quiz_screen.dart';
 import 'package:quizz_app/models/level.dart';
-import '../purchase/coin_package_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'cubit/level_cubit.dart';
@@ -30,7 +29,7 @@ class _LevelListScreenState extends State<LevelListScreen> {
     return BlocProvider(
       create: (context) => _levelCubit,
       child: Scaffold(
-        backgroundColor: const Color(0xff272052),
+        backgroundColor: const Color(0xff793ae7),
         body: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(
@@ -41,61 +40,9 @@ class _LevelListScreenState extends State<LevelListScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 /// coin button
-                Align(
+                const Align(
                   alignment: Alignment.center,
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const CoinPackageScreen(),
-                        ),
-                      );
-                    },
-                    child: IntrinsicWidth(
-                      child: Container(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 4.h, horizontal: 12.w),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(16.r),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            BlocBuilder<UserCubit, UserState>(
-                              builder: (context, state) {
-                                if (state is UserLoaded) {
-                                  return Text(
-                                    state.user.coins.toInt().toString(),
-                                    style: TextStyle(
-                                      fontSize: 16.sp,
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w700,
-                                      fontFamily:
-                                          GoogleFonts.beVietnamPro().fontFamily,
-                                    ),
-                                  );
-                                } else {
-                                  return const SizedBox();
-                                }
-                              },
-                            ),
-                            SizedBox(
-                              width: 8.w,
-                            ),
-                            Image.asset(
-                              'assets/dollar.png',
-                              height: 30.w,
-                              width: 30.w,
-                              fit: BoxFit.fill,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
+                  child: CoinButton(),
                 ),
                 SizedBox(
                   height: 16.h,
@@ -124,13 +71,20 @@ class _LevelListScreenState extends State<LevelListScreen> {
                           padding: EdgeInsets.only(bottom: 20.h),
                           separatorBuilder: (_, __) => SizedBox(height: 10.h),
                           itemBuilder: (context, index) {
-                            final cat = item[index];
-                            bool isDone = cat.isDone;
+                            final level = item[index];
+                            bool isDone = level.isDone;
                             return InkWell(
                               onTap: () {
                                 Navigator.of(context)
                                     .push(MaterialPageRoute(
-                                      builder: (context) => const QuizScreen(),
+                                      builder: (context) => QuizScreen(
+                                        image: level.avatar,
+                                        heart: level.hp,
+                                        changeQuizCount: level.changeQuestion,
+                                        eliminateAnswerCount:
+                                            level.eliminateAnswer,
+                                        currentLevel: level,
+                                      ),
                                     ))
                                     .then(
                                       (value) => _levelCubit.loadLevels(),
@@ -153,10 +107,10 @@ class _LevelListScreenState extends State<LevelListScreen> {
                                         decoration: BoxDecoration(
                                           color: Colors.grey.shade300,
                                         ),
-                                        child: cat.avatar != null &&
-                                                cat.avatar!.isNotEmpty
+                                        child: level.avatar != null &&
+                                                level.avatar!.isNotEmpty
                                             ? Image.asset(
-                                                "assets/${cat.avatar!}",
+                                                "assets/${level.avatar!}",
                                                 fit: BoxFit.fill,
                                               )
                                             : const SizedBox(),
@@ -170,7 +124,7 @@ class _LevelListScreenState extends State<LevelListScreen> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          Text(cat.name ?? '',
+                                          Text(level.name ?? '',
                                               style: TextStyle(
                                                   fontSize: 12.sp,
                                                   fontWeight: FontWeight.w400,
@@ -178,7 +132,7 @@ class _LevelListScreenState extends State<LevelListScreen> {
                                                       GoogleFonts.jotiOne()
                                                           .fontFamily)),
                                           SizedBox(height: 8.h),
-                                          InfoLevel(cat: cat),
+                                          InfoLevel(cat: level),
                                         ],
                                       ),
                                     ),

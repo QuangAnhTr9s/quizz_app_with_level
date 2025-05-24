@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quizz_app/commons/widgets/custom_text_button.dart';
 import 'package:quizz_app/feature/quizz/cubit/quiz_cubit.dart';
 import 'package:quizz_app/feature/quizz/models/quiz.dart';
 
@@ -36,54 +37,41 @@ class _QuizChooseAnsState extends State<QuizChooseAns> {
         if (state is QuizLoaded && state.questions?.isNotEmpty == true) {
           List<Answer> answers =
               state.questions![state.indexQuestion].answers ?? [];
-          return Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 16.h),
-                child: Text(
-                  'Chọn đáp án đúng',
-                  style: TextStyle(
-                    color: AppColors.black,
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-              ),
-              ListView.separated(
-                padding: EdgeInsets.symmetric(vertical: 20.h).copyWith(top: 0),
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                separatorBuilder: (context, index) => SizedBox(
-                  height: 16.h,
-                ),
-                itemCount: answers.length,
-                itemBuilder: (context, index) => AnswerButton(
-                  key: ValueKey("${answers[index].answer}" "$index"),
-                  isSelected: indexSelectedList?.isNotEmpty == true &&
-                      indexSelectedList!.contains(index),
-                  answer: answers[index],
-                  onTap: (isCorrect) async {
-                    setState(() {
-                      if (indexSelectedList == null) {
-                        indexSelectedList = [index];
-                      } else if (indexSelectedList!.contains(index) != true) {
-                        indexSelectedList!.add(index);
-                      }
-                    });
-                    if (isCorrect) {
-                      await Future.delayed(const Duration(milliseconds: 500));
-                      if (context.mounted) {
-                        indexSelectedList = null;
-                        context.read<QuizCubit>().nextQuestion();
-                      }
-                    } else {
-                      context.read<QuizCubit>().useHeart();
-                    }
-                  },
-                ),
-              ),
-            ],
+          return GridView.builder(
+            padding: EdgeInsets.symmetric(vertical: 20.h).copyWith(top: 0),
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 16.w,
+              mainAxisSpacing: 16.h,
+              mainAxisExtent: 80.h,
+            ),
+            itemCount: answers.length,
+            itemBuilder: (context, index) => AnswerButton(
+              key: ValueKey("${answers[index].answer}" "$index"),
+              isSelected: indexSelectedList?.isNotEmpty == true &&
+                  indexSelectedList!.contains(index),
+              answer: answers[index],
+              onTap: (isCorrect) async {
+                setState(() {
+                  if (indexSelectedList == null) {
+                    indexSelectedList = [index];
+                  } else if (indexSelectedList!.contains(index) != true) {
+                    indexSelectedList!.add(index);
+                  }
+                });
+                if (isCorrect) {
+                  await Future.delayed(const Duration(milliseconds: 500));
+                  if (context.mounted) {
+                    indexSelectedList = null;
+                    context.read<QuizCubit>().nextQuestion();
+                  }
+                } else {
+                  context.read<QuizCubit>().useHeart();
+                }
+              },
+            ),
           );
         } else {
           return const SizedBox.shrink();
@@ -125,6 +113,7 @@ class AnswerButton extends StatelessWidget {
       text: answer.answer ?? '',
       bgColor: bgColor,
       borderColor: borderColor,
+      padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 8.w),
       onTap: () {
         if (canTap) {
           onTap(answer.isCorrect ?? false);

@@ -6,9 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quizz_app/cubits/user/user_cubit.dart';
+import 'package:quizz_app/feature/level/cubit/level_cubit.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../commons/constant.dart';
+import '../../../models/level.dart';
 import '../models/quiz.dart';
 import '../models/quiz_record.dart';
 
@@ -16,11 +18,16 @@ part 'quiz_state.dart';
 
 class QuizCubit extends Cubit<QuizState> {
   QuizCubit() : super(QuizInitial());
+  Level? level;
 
-  Future<void> loadQuiz() async {
+  Future<void> loadQuiz({
+    int? heart,
+    int? changeQuizCount,
+    int? eliminateAnswerCount,
+  }) async {
     List<Quiz>? questions = await loadQuizData('assets/data/questions.json');
     if (questions != null) {
-      List<QuizRecord> records = await loadRecords();
+      // List<QuizRecord> records = await loadRecords();
       questions.shuffle();
       questions = questions.take(20).toList();
       questions = questions.map(
@@ -31,7 +38,12 @@ class QuizCubit extends Cubit<QuizState> {
       ).toList();
       emit(QuizLoaded(
         questions: questions,
-        records: records,
+        // records: records,
+      ));
+      emit((state as QuizLoaded).copyWith(
+        heart: heart,
+        changeQuizCount: changeQuizCount,
+        eliminateAnswerCount: eliminateAnswerCount,
       ));
     } else {
       emit(QuizError());
@@ -42,7 +54,8 @@ class QuizCubit extends Cubit<QuizState> {
     /// call when choose correct answer or click change question button
     if (state is QuizLoaded) {
       if (state.indexQuestion >= state.questions!.length - 1) {
-        saveRecord(index: state.questions!.length);
+        // saveRecord(index: state.questions!.length);
+        LevelCubit().updateLevel(level!);
         emit((state as QuizLoaded).copyWith(message: BlocMessage.completeQuiz));
       } else {
         emit((state as QuizLoaded).copyWith(
@@ -165,6 +178,7 @@ class QuizCubit extends Cubit<QuizState> {
 
   /// record
   Future<void> saveRecord({int? index}) async {
+    return;
     if (state is QuizLoaded) {
       List<QuizRecord> records = (state as QuizLoaded).records ?? [];
       int newRecordCount = index ??

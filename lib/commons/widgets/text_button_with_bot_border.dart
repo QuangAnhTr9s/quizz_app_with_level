@@ -4,19 +4,22 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'custom_text_button.dart';
 
 class TextButtonWithBotBorder extends StatefulWidget {
-  const TextButtonWithBotBorder(
-      {super.key,
-      required this.text,
-      this.onAnimation = true,
-      this.bgColor,
-      this.borderColor,
-      this.onTap});
+  const TextButtonWithBotBorder({
+    super.key,
+    required this.text,
+    this.onAnimation = true,
+    this.bgColor,
+    this.borderColor,
+    this.onTap,
+    this.padding,
+  });
 
   final String text;
   final bool onAnimation;
   final Color? bgColor;
   final Color? borderColor;
   final Function()? onTap;
+  final EdgeInsetsGeometry? padding;
 
   @override
   State<TextButtonWithBotBorder> createState() =>
@@ -31,6 +34,7 @@ class _TextButtonWithBotBorderState extends State<TextButtonWithBotBorder> {
       onAnimation: widget.onAnimation,
       bgColor: widget.bgColor,
       buttonFn: widget.onTap,
+      padding: widget.padding,
       border: Border(
         top: BorderSide(
             color: widget.borderColor ?? Colors.white, width: 2.w), // Viền trên

@@ -1,25 +1,32 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quizz_app/commons/constant.dart';
 import 'package:quizz_app/commons/widgets/cancel_button.dart';
+import 'package:quizz_app/commons/widgets/coin_button.dart';
 import 'package:quizz_app/feature/quizz/widgets/quiz_widget.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quizz_app/models/level.dart';
 
-import '../../cubits/user/user_cubit.dart';
-import '../purchase/coin_package_screen.dart';
 import 'cubit/quiz_cubit.dart';
 import 'dialogs/dialog_services.dart';
-import 'models/quiz_record.dart';
-import 'widgets/quiz_record_screen.dart';
 
 class QuizScreen extends StatefulWidget {
   const QuizScreen({
     super.key,
+    this.heart,
+    this.changeQuizCount,
+    this.eliminateAnswerCount,
+    this.image,
+    this.currentLevel,
   });
 
   static const routeName = '/quizScreen';
-
+  final int? heart;
+  final int? changeQuizCount;
+  final int? eliminateAnswerCount;
+  final String? image;
+  final Level? currentLevel;
   @override
   State<QuizScreen> createState() => _QuizScreenState();
 }
@@ -30,7 +37,12 @@ class _QuizScreenState extends State<QuizScreen> {
   @override
   void initState() {
     super.initState();
-    _quizCubit.loadQuiz();
+    _quizCubit.level = widget.currentLevel;
+    _quizCubit.loadQuiz(
+      heart: widget.heart,
+      changeQuizCount: widget.changeQuizCount,
+      eliminateAnswerCount: widget.eliminateAnswerCount,
+    );
   }
 
   @override
@@ -41,7 +53,11 @@ class _QuizScreenState extends State<QuizScreen> {
 
   void replayFunc() {
     _quizCubit.saveRecord();
-    _quizCubit.loadQuiz();
+    _quizCubit.loadQuiz(
+      heart: widget.heart,
+      changeQuizCount: widget.changeQuizCount,
+      eliminateAnswerCount: widget.eliminateAnswerCount,
+    );
   }
 
   void goHomeFunc() {
@@ -109,9 +125,8 @@ class _QuizScreenState extends State<QuizScreen> {
               horizontal: 20.w,
             ).copyWith(top: 16.h),
             decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/bg_image.png"),
-                    fit: BoxFit.fill)),
+              color: Color(0xff793ae7),
+            ),
             child: SafeArea(
               child: BlocBuilder<QuizCubit, QuizState>(
                 bloc: _quizCubit,
@@ -125,7 +140,7 @@ class _QuizScreenState extends State<QuizScreen> {
                   }
 
                   final questions = state.questions!;
-                  final indexVocabulary = state.indexQuestion;
+                  final indexQuestion = state.indexQuestion;
                   return Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -139,114 +154,49 @@ class _QuizScreenState extends State<QuizScreen> {
                               onTap: () => _quizCubit.saveRecord(),
                             ),
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              BlocBuilder<QuizCubit, QuizState>(
-                                builder: (context, state) {
-                                  List<QuizRecord> records =
-                                      (state is QuizLoaded &&
-                                              state.records?.isNotEmpty == true)
-                                          ? state.records!
-                                          : [];
-                                  return InkWell(
-                                    onTap: () => Navigator.of(context)
-                                        .push(MaterialPageRoute(
-                                      builder: (context) => QuizRecordScreen(
-                                        records: records,
-                                      ),
-                                    )),
-                                    child: Icon(
-                                      Icons.emoji_events,
-                                      color: const Color(0xffeead63),
-                                      size: 36.w,
-                                    ),
-                                  );
-                                },
-                              ),
-                              SizedBox(
-                                width: 16.w,
-                              ),
-                              InkWell(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          const CoinPackageScreen(),
-                                    ),
-                                  );
-                                },
-                                child: Container(
-                                  padding: EdgeInsets.only(left: 8.w),
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(24.r),
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      BlocBuilder<UserCubit, UserState>(
-                                        builder: (context, state) {
-                                          if (state is UserLoaded) {
-                                            return Text(
-                                              state.user.coins
-                                                  .toInt()
-                                                  .toString(),
-                                              style: TextStyle(
-                                                  fontSize: 16.sp,
-                                                  color: Colors.black),
-                                            );
-                                          } else {
-                                            return const SizedBox();
-                                          }
-                                        },
-                                      ),
-                                      SizedBox(
-                                        width: 4.w,
-                                      ),
-                                      Image.asset(
-                                        'assets/dollar.png',
-                                        height: 30.w,
-                                        width: 30.w,
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
+                          const CoinButton(),
                         ],
+                      ),
+                      SizedBox(
+                        height: 16.h,
                       ),
 
                       /// content
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(vertical: 16.h),
-                            child: Text(
-                              "${indexVocabulary + 1}/${questions.length}",
-                              style: TextStyle(
-                                fontSize: 16.sp,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w400,
+                      Expanded(
+                        child: ListView(
+                          padding: EdgeInsets.zero,
+                          children: [
+                            /// image
+                            if (widget.image?.isNotEmpty == true)
+                              Padding(
+                                padding: EdgeInsets.only(bottom: 16.h),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.r),
+                                  child: Container(
+                                    width: double.maxFinite,
+                                    height: 300.h,
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey.shade300,
+                                    ),
+                                    child: Image.asset(
+                                      "assets/${widget.image!}",
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            Padding(
+                              padding: EdgeInsets.only(bottom: 16.h),
+                              child: QuizWidget(
+                                key:
+                                    ValueKey(questions[indexQuestion].question),
+                                quiz: questions[indexQuestion],
+                                percent:
+                                    (indexQuestion) / (questions.length - 1),
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(bottom: 16.h),
-                            child: QuizWidget(
-                              key:
-                                  ValueKey(questions[indexVocabulary].question),
-                              quiz: questions[indexVocabulary],
-                            ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ],
                   );
