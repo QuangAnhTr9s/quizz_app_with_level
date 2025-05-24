@@ -98,13 +98,15 @@ class _MainPageState extends State<MainPage> {
           return Container(
             height: 1.sh,
             width: 1.sw,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-              image: const AssetImage('assets/bg_image.png'),
-              fit: BoxFit.fill,
-              colorFilter: ColorFilter.mode(
-                  Colors.black.withOpacity(0.5), BlendMode.dstATop),
-            )),
+            decoration: const BoxDecoration(
+              color: Color(0xff793ae7),
+            //     image: DecorationImage(
+                //   image: const AssetImage('assets/bg_image.png'),
+                //   fit: BoxFit.fill,
+                //   colorFilter: ColorFilter.mode(
+                //       Colors.black.withOpacity(0.5), BlendMode.dstATop),
+                // ),
+                ),
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
